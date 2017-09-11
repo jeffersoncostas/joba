@@ -14,13 +14,14 @@ body {
 }
 
 header .head {
-	float: right;
+	
+	float: left;
 	display: block;
 }
 
 header .nav-bar {
+	
 	width: 10%;
-	margin: 0px 5px 0px 0px;
 	z-index: 1;
 	height: 100%;
 	float: left;
@@ -29,19 +30,32 @@ header .nav-bar {
 	background: #E9E9E9;
 	box-shadow: 8px 0px 13px -5px rgba(0, 0, 0, 0.16);
 	transition: 2s;
+	position: relative;
+	animation: slider-leftbar 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slider-leftbar {
+	
+	from{ left: -250;}
+	to { left:0;}
+	
 }
 
 header .nav-bar .brand {
-	width: 150;
-	height: 150px;
-	background-image: url(/prototype/versao2/assets/images/nome.png);
+	
+	min-width:25px ;
+	min-height: 25px;
+	max-width: 150;
+	max-height: 150px;
+	background-image: url(/prototype/joba/versao2/assets/images/nome.png);
 	background-size: 130px;
 	background-position: center;
 	
 	background-repeat: no-repeat;
 	padding: 10px 15px;
-	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	margin-right: 0px;
 	
 }
