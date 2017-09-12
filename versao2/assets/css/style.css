@@ -1,15 +1,17 @@
 * {
-	margin: 0;
+	margin: 0px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Quicksand:500,700');
+
 body {
 	font-family: 'Quicksand', sans-serif;
 	background: rgb(214, 214, 214);
+	height: auto;
 }
 
 nav {
-	width: 10%;
+	width: 12%;
 	z-index: 1px;
 	height: 100vh;
 	background: rgb(255, 255, 255);
@@ -25,14 +27,14 @@ nav {
 
 @keyframes nav-bar {
 	from {
-		left: -250px;
+		left: -350px;
 	}
 	to {
 		left: 0px;
 	}
 }
 
-nav>.brand {
+nav > .brand {
 	min-width: 25px;
 	min-height: 25px;
 	max-width: 150px;
@@ -47,7 +49,7 @@ nav>.brand {
 	margin-right: 0px;
 }
 
-nav ul {
+nav ul {	
 	padding: 0px;
 	margin: 0px;
 	display: block;
@@ -75,11 +77,12 @@ nav ul li:hover {
 }
 
 nav ul li span:after {
+	overflow:auto;
 	color: white;
 	content: "______________________________";
 	font-family: sans-serif;
 	font-weight: bold;
-	font-size: 0.8vw;
+	font-size: 0.9vw;
 	transition: 0.5s ease-out;
 	opacity: 0;
 }
@@ -90,40 +93,47 @@ nav ul li:hover span:after {
 	font-size: 0.5vw;
 }
 
-.search-container {
-	text-align: center;
+.search-container input[type="text"] {
+	
+	box-sizing: border-box;
+	font-size:25px;
+	text-align: right;
 	display: inline-block;
 	position: relative;
-	margin-top: 20px;
-	left: 20%;
+	margin-top: 0.5vh;
+	left: 34%;
 	width: 40%;
-	height: 70;
+	height: 50px;
+	padding: 10px;
 	background-color: #ffffff;
-	border-bottom: 3px solid rgb(203, 203, 203);
-	border-radius: 10px;
+	border:none;
+	border-radius: 10px;	
+	padding-right: 90px;
+
 }
 
-.search-container .search-icon {
-	padding: 10px;
-	border-right: 2px solid #d6d6d6;
-	width: 50px;
-	height: 50px;
-	background-size: 50px;
+.search-container input[type="text"] {
+	
+	background-size: 30px;
 	background-repeat: no-repeat;
 	background-image: url(/prototype/joba/versao2/assets/images/SVG/search.svg);
-	background-position: center;
+	background-position:96%;
+	
 }
 
 .page-container {
+	
 	display: block;
-	padding-left: 17%;
-	width: 83%;
+	padding-left: 18%;
+	width: 81%;
+	
 }
 
 .page-container article {
+	
 	background-color: white;
 	display: inline-block;
-	margin: 2%;
+	margin: 1.6%;
 	z-index: -1;
 	min-height: 350px;
 	width: 350px;
@@ -145,6 +155,6 @@ nav ul li:hover span:after {
 }
 
 .page-container article p {
-	font-size: 25px;
-	text-align: center;
+	font-size: 100%;
+	text-align: left;
 }
