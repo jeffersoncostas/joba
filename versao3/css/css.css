@@ -9,6 +9,12 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: karla;
+	src: url("font/Karla-Regular.ttf");
+	font-style: normal;
+}
+
 body {
 	font-family: 'quicksand'
 }
@@ -344,7 +350,7 @@ body {
 	
 }
 
-.content-2 span p{
+.content-2 .title-1 p{
 	position: relative;
 	left: 25%;
 	width: 50%;
@@ -355,7 +361,7 @@ body {
 	border-bottom: 2px rgba(255, 172, 28, 0.52);
 	border-bottom-style:solid;
 }
-.content-2 span p b::after{
+.content-2 .title-1 p b::after{
 	content: "_______"
 }
 
@@ -368,12 +374,80 @@ body {
 
 }
 .can-do{
+	position: relative;
 	display: inline-block;
-	border-radius: 100%;
-	width: 300px;
+	border-radius: 5px	;
+	width: 400px;
 	height: 300px;
 	background: #ffffff;
+	background-image: url(../img/lamp-icon.svg);
+	background-repeat: no-repeat;
+	background-size:60px;
+	background-position: 50% 10%;
 	margin-left: 50px;
 	box-shadow: 0px 4px 0px	rgba(0, 0, 0, 0.1);
 
+}
+.can-do:nth-child(1){
+		margin-left: 0px;
+
+}
+.can-do:nth-child(2){
+		background-size:85px;
+		background-position: 50% 10%;
+		background-image: url(../img/explore-icon.svg);
+
+}
+
+.can-do .text-do{
+
+	box-sizing: border-box;
+	padding-top: 30%;
+	padding-left: 5%;
+	padding-right: 5%;
+
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	font-family: karla;
+}
+
+.can-do .text-do span p {
+	
+	font-size: 27px;
+	margin-bottom: 4%;
+}
+
+.can-do .text-do p span {
+	color: #FFAC1C;
+}
+
+.botao-comecar{
+	cursor: pointer;
+	box-sizing: border-box;
+	position: absolute;
+	transform: scale(0.9,0.9);
+	border-radius: 5px;
+	padding: 5px;
+	width: 100%;
+	height: 13%;
+	background-color: rgba(255, 40, 109, 0.78);
+	transition: all 0.3s;
+	bottom: 15px;
+	left: 0%;
+}
+
+.botao-comecar:hover{
+	transform: scale(1,1);
+
+	background-color: rgb(255, 40, 109);
+
+}
+.botao-comecar p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: white;
 }
