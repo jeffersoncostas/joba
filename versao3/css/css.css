@@ -155,6 +155,7 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 30px;
+	padding-bottom: 20px;
 	font-size: 17px;
 	color: white;
 	transition: all 0.3s;
@@ -343,11 +344,19 @@ body {
 }
 
 .content-2 span p{
+	position: relative;
+	left: 25%;
+	width: 50%;
+	height:15%;
 	margin-bottom: 60px;
 	text-align: center;
 	font-size: 40px;
-
+	border-bottom: solid 2px rgba(255, 172, 28, 0.52);
 }
+.content-2 span p b::after{
+	content: "_______"
+}
+
 
 .do-blocks{
 	display: flex;
