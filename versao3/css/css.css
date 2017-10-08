@@ -223,6 +223,7 @@ body {
 	width: 100%;
 	background-image: url(../imgs/destaque.jpg);
 	background-size: cover;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 }
 
