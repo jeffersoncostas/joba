@@ -21,7 +21,7 @@ body {
 	display: flex;
 	box-sizing: border-box;
 	overflow: none;
-	background-color: #332b2a;
+	background-color: #362c2b;
 }
 
 .logotipo {
@@ -157,12 +157,12 @@ body {
 	padding-top: 30px;
 	padding-bottom: 20px;
 	font-size: 17px;
-	color: white;
+	color: rgba(255, 255, 255, 0.65);
 	transition: all 0.3s;
 }
 
 .menu-2 .menu-3:hover {
-	
+	color: white;
 	background-color: #695654;
 }
 
@@ -173,7 +173,7 @@ body {
 }
 
 .menu-2 #cadastro:hover {
-	background-color: #ff4480;
+	background-color: #ea477b;
 }
 
 
@@ -182,7 +182,7 @@ body {
 	max-height: 0px;
 	overflow:hidden;
 	background-color: #695654;
-	transition: all 0.3s ease;
+	transition: all 0.6s ease;
 }
 
 .dropdown:hover .dropdown-content{
