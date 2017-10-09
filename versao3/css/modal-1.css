@@ -36,6 +36,24 @@
 
 }
 
+.deslizar-esquerda {
+
+	animation-name: deslizar2;
+	animation-duration: 0.8s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes deslizar2 {
+
+	0% {
+		transform: translate(0px, 0px)
+	}
+	100% {
+		transform: translate(500px, 0px)
+	}
+}
+
 .close-modal {
 	cursor: pointer;
 	position: relative;
