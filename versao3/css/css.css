@@ -257,7 +257,9 @@ body {
 	margin-top: 20px;
 	height: 120px;
 	background-color: #FF286D;
-	border-radius: 10px;
+	border-radius: 10px;	
+	transition: all 0.3s;
+
 }
 
 .button-cadastro p {
@@ -268,6 +270,11 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.button-cadastro:active{
+	
+	transform: scale(0.95,0.95);
 }
 
 .background-gradient {
@@ -333,7 +340,32 @@ body {
 	width: 50px;
 }
 
+
+
 /* fim Content 1*/
+
+
+/*Modal login/cadastro*/
+
+.background-fixo{
+	display: none;
+	z-index: 3;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.74);
+	width: 100vw;
+	height: 100vh;
+}
+
+.modal-login-cadastro{
+	display: none;
+	z-index: 4;
+	background-color: #f8f8f8;
+	position: fixed;
+	width: 500px;
+	height: 100vh;
+	right: 0;
+}
+
 
 
 /* Content 2*/
@@ -343,7 +375,7 @@ body {
 	display: block;
 	box-sizing: border-box;
 	background-color: #f2f2f2;
-	height: 500px;
+	height: 580px;
 	width: 100%;
 	padding-top: 40px;
 
@@ -398,7 +430,12 @@ body {
 		background-image: url(../img/explore-icon.svg);
 
 }
+.can-do:nth-child(3){
+		background-size:90px;
+		background-position: 50% 10%;
+		background-image: url(../img/gerenciar-ideias.svg);
 
+}
 .can-do .text-do{
 
 	box-sizing: border-box;
