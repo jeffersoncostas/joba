@@ -261,6 +261,7 @@ body {
 	background-color: #FF286D;
 	border-radius: 10px;
 	transition: all 0.3s;
+	box-shadow: 0 5px #ad1445;
 
 }
 
@@ -463,6 +464,8 @@ body {
 	width: 100%;
 	height: 13%;
 	background-color: rgba(255, 40, 109, 0.78);
+	box-shadow: 0 3px #ad1445;
+
 	transition: all 0.3s;
 	bottom: 10px;
 	left: 0%;

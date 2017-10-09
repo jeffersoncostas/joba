@@ -57,7 +57,7 @@
 .close-modal {
 	cursor: pointer;
 	position: relative;
-	background-color: rgba(0, 0, 0, 0.53);
+	background-color: #272020;
 	width: 50px;
 	height: 50px;
 	padding: 5px;
@@ -69,7 +69,8 @@
 .close-modal:hover {
 
 	transform: scale(1.1, 1.1);
-	background-color: #272020;
+	background-color: rgb(180, 10, 10);
+
 }
 
 .close-modal:active {
@@ -84,4 +85,21 @@
 	transform: translate(-50%, -50%);
 	color: white;
 	font-size: 30px;
+}
+
+
+/*content*/
+
+#modal .content-modal {
+	box-sizing: content-box;
+	padding-top: 100px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.content-modal span p {
+	color: #585858;
+	font-size: 30px;
+	text-align: center;
+
 }
