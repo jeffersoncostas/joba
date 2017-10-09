@@ -1,0 +1,32 @@
+.background-fixo{
+	display: none;
+	z-index: 3;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.74);
+	width: 100vw;
+	height: 100vh;
+}
+
+#modal{
+	transform: translate(500px,0px);
+	z-index: 4;
+	background-color: #f8f8f8;
+	position: fixed;
+	width: 500px;
+	height: 100vh;
+	right: 0;
+	
+
+}
+
+.deslizar-direita{
+	animation-name:deslizar;
+	animation-duration: 0.8s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes deslizar{
+	0%{transform: translate(500px,0px)}
+	100%{transform: translate(0px,0px)}
+
+}

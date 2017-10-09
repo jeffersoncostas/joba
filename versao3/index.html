@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Tocaqui!</title>
 	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/modal-1.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -12,8 +13,10 @@
 <body>
 	<header class="principal">
 		<nav class="nav-1">
-			<div class="logotipo"><img src="img/Group%201.svg" alt=""></div>
-			<div class="logotipo-2"><img src="img/Ativo%201.svg" alt=""></div>
+			<div class="logotipo"><img src="img/Group%201.svg" alt="">
+			</div>
+			<div class="logotipo-2"><img src="img/Ativo%201.svg" alt="">
+			</div>
 
 			<div class="centro">
 				<div class="search">
@@ -57,14 +60,14 @@
 	<div class="content-principal">
 
 		<div id="modal">
-			sasa
+			<label for=""></label>
 		</div>
 		<div class="text">
 			<p> no Tocaqui! você publica suas <span>ideias</span> </p>
 			<p>explora as <span>ideias</span> publicadas</p>
 			<p><span>coopera</span> com outras pessoas</p>
 			<p>e ainda gera algum <span>dindin</span> </p>
-			<div class="button-cadastro" onclick="document.getElementById('modal').className='deslizar-direita'; document.getElementById('bg-fixo').style.display='block'">
+			<div class="button-cadastro" onclick="modal()">
 				<p>quero publicar uma ideia!</p>
 			</div>
 
@@ -77,13 +80,13 @@
 		</div>
 		<div class="img-fundo">
 		</div>
-		<div class="conhecer">
+		<a href="#content-2" class="conhecer">
 			<p>ver mais </p>
 			<div class="setinha"></div>
-		</div>
+		</a>
 	</div>
 
-	<div class="content-2">
+	<div id="content-2" class="content-2">
 		<span class="title-1"><p> o que eu posso fazer no Tocaqui! ?</p><b></b></span>
 		<div class="do-blocks">
 			<div class="can-do">
@@ -122,10 +125,10 @@
 
 	</div>
 
-	<div class="content-3">
-
+	<div id="content-3" class="content-3">
+		a
 	</div>
 
-</body>
 
-</html>
+
+</body>
