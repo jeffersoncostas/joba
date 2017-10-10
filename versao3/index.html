@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body id="body">
 	<header class="principal">
 		<nav class="nav-1">
 			<div class="logotipo"><img src="img/Group%201.svg" alt="">
@@ -49,7 +49,7 @@
 						</div>
 
 					</div>
-					<li class="menu-3">já tenho conta!</li>
+					<li class="menu-3" onclick="modal()">já tenho conta!</li>
 					<li class="menu-3" id="cadastro"> não tenho uma conta ainda :(</li>
 				</ul>
 			</div>
@@ -65,9 +65,23 @@
 			</div>
 
 			<div class="content-modal">
-				<span><p>entrar</p></span>
+				<span><p>login </p></span>
+
+				<form action="" class="form-login">
+					<input type="text" name="email" placeholder=" meu e-mail">
+					<input type="password" name="password" placeholder="minha senha">
+
+					<div class="button-cadastro button-entrar" name="">
+						<p>entrar no tocaqui!</p>
+					</div>
+				</form>
+
+				<div class="sem-conta">
+					<p>não tenho conta</p>
+					<span>___________________________</span>
+				</div>
 			</div>
-			<label for=""></label>
+
 		</div>
 		<div class="text">
 			<p> no Tocaqui! você publica suas <span>ideias</span> </p>

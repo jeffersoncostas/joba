@@ -2,12 +2,14 @@ function modal() {
 
 	document.getElementById('modal').className = 'deslizar-direita';
 	document.getElementById('bg-fixo').style.display = 'block';
+	document.getElementById('body').style.overflow = 'hidden';
 }
 
 function closeModal() {
 
 	document.getElementById('modal').className = 'deslizar-esquerda';
 	document.getElementById('bg-fixo').style.display = 'none';
+	document.getElementById('body').style.overflow = 'auto';
 }
 
 
