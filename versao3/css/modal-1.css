@@ -7,12 +7,19 @@
 	height: 100vh;
 }
 
+
+@media screen and (min-width:1366px) {
+	#modal {}
+
+
+}
+
 #modal {
 	transform: translate(500px, 0px);
 	z-index: 4;
 	background-color: #f8f8f8;
 	position: fixed;
-	width: 500px;
+	width: 25%;
 	height: 100vh;
 	right: 0;
 
@@ -114,9 +121,9 @@
 	box-sizing: border-box;
 	font-size: 20px;
 	border-radius: 5px;
-	margin-bottom: 40px;
+	margin-bottom: 10%;
 	width: 100%;
-	height: 80px;
+	height: 5%;
 	padding-left: 80px;
 	box-shadow: 0 3px 0px #48D9CB;
 	outline: none;
@@ -133,6 +140,12 @@
 	background-color: #FFAC1C;
 	box-shadow: 0 4px #c4810d;
 	color: white;
+	height: 7%;
+}
+
+.button-cadastro p {
+
+	font-size: 2.5vh;
 }
 
 .sem-conta {
@@ -232,14 +245,15 @@
 
 .sem-conta-popup p {
 	padding: 10px;
-
+	font-size: 1.5vh;
 }
 
 .sem-conta-popup p:nth-child(1) {
 
-	font-size: 20px;
+	font-size: 2vh;
 	padding-bottom: 25px;
 }
+
 
 .sem-conta-popup p span {
 	cursor: pointer;
