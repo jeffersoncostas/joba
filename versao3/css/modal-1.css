@@ -15,7 +15,7 @@
 }
 
 #modal {
-	transform: translate(500px, 0px);
+	transform: translate(200%, 0px);
 	z-index: 4;
 	background-color: #f8f8f8;
 	position: fixed;
@@ -35,7 +35,7 @@
 
 @keyframes deslizar {
 	0% {
-		transform: translate(500px, 0px)
+		transform: translate(200%, 0px)
 	}
 	100% {
 		transform: translate(0px, 0px)

@@ -20,34 +20,31 @@ body {
 }
 
 .nav-1 {
+	display: flex;
 	z-index: 10;
 	position: fixed;
-	height: 80px;
+	height: 70px;
 	width: 100%;
-	display: flex;
 	box-sizing: border-box;
 	overflow: none;
 	background-color: #362c2b;
 }
 
 .logotipo {
-	padding-top: 0.7%;
-	padding-left: 0.7%;
-	margin-right: 20px;
-	box-sizing: border-box;
-	display: inline-block;
-	width: 80px;
-	min-width: 55px;
+	padding: 20px 20px 0px;
+	min-width: 30px;
 }
 
 .logotipo-2 {
 	box-sizing: border-box;
-	padding-top: 0.7%;
-	width: 150px;
+	padding-top: 15px;
+	min-width: 70px;
 	display: inline-block;
 }
 
 .centro {
+	height: 100%;
+
 	justify-content: center;
 	display: inline-flex;
 	width: 100%;
@@ -70,7 +67,7 @@ body {
 	box-shadow: none;
 	border: none;
 	box-sizing: border-box;
-	height: 80px;
+	height: 100%;
 	width: 5vw;
 	background-color: #695654;
 	padding-left: 80px;
@@ -222,8 +219,7 @@ body {
 /* Content 1*/
 
 .content-principal {
-	padding-top: 80px;
-	height: 100vh;
+	padding-top: 70px;
 	background-color: #e3e3e3;
 }
 
@@ -289,7 +285,7 @@ body {
 .background-gradient {
 	z-index: 1;
 	position: absolute;
-	bottom: -80px;
+	bottom: -70px;
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.25));

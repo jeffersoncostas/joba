@@ -5,6 +5,7 @@ function modal() {
 	document.getElementById('body').style.overflow = 'hidden';
 }
 
+
 function closeModal() {
 
 	document.getElementById('modal').className = 'deslizar-esquerda';
@@ -30,14 +31,20 @@ function byeContaPopUp() {
 
 }
 
-var semContaLink = document.querySelector('.sem-conta');
-var semConta = document.querySelector('.sem-conta-popup');
-var popUpP = document.querySelector('.pop-up-text')
+let semContaLink = document.querySelector('.sem-conta');
+let semConta = document.querySelector('.sem-conta-popup');
+let popUpP = document.querySelector('.pop-up-text')
 
 
 semContaLink.addEventListener("mouseenter", semContaPopUp);
 semContaLink.addEventListener("mouseleave", byeContaPopUp);
 
+
+
+
+
+let pesquisaBar = document.querySelector('.centro');
+let pesquisaIcon = document.querySelector('.busc');
 
 
 
