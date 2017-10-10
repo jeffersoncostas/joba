@@ -15,6 +15,35 @@ function closeModal() {
 
 
 
+function semContaPopUp() {
+
+	semConta.style.animationName = 'deslizar-cima';
+	popUpP.style.animationName = 'aparecer';
+
+}
+
+function byeContaPopUp() {
+
+	semConta.style.animationName = 'deslizar-baixo';
+	popUpP.style.animationName = 'desaparecer';
+
+
+}
+
+var semContaLink = document.querySelector('.sem-conta');
+var semConta = document.querySelector('.sem-conta-popup');
+var popUpP = document.querySelector('.pop-up-text')
+
+
+semContaLink.addEventListener("mouseenter", semContaPopUp);
+semContaLink.addEventListener("mouseleave", byeContaPopUp);
+
+
+
+
+
+
+
 $(function () {
 	// This will select everything with the class smoothScroll
 	// This should prevent problems with carousel, scrollspy, etc...
