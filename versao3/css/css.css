@@ -74,11 +74,22 @@ body {
 	transition: all 0.3s cubic-bezier(.21, 0, .55, .76);
 }
 
+/*
 .busc:hover {
 	background-color: #72615f;
 }
+*/
 
+/*
 .busc:hover {
+	cursor: auto;
+	background: #f0f0f0;
+	color: grey;
+	width: 30vw;
+}
+*/
+
+.busc-hover {
 	cursor: auto;
 	background: #f0f0f0;
 	color: grey;
@@ -113,6 +124,21 @@ body {
 	background-size: 45px;
 }
 
+.search-geral-hover {
+	background-image: url(../img/icone_pesquisar_1_.svg);
+	background-repeat: no-repeat;
+	background-position: 10px 50%;
+	background-size: 45px;
+}
+
+.search-geral-focus {
+	background-image: url(../img/icone_pesquisar_1_.svg);
+	background-repeat: no-repeat;
+	background-position: 10px 50%;
+	background-size: 45px;
+}
+
+
 .search-gps {
 	background-image: url(../img/icone_localiza%C3%A7%C3%A3o_2_.svg);
 	background-repeat: no-repeat;
@@ -128,6 +154,20 @@ body {
 }
 
 .search-gps:focus {
+	background-image: url(../img/icone_localiza%C3%A7%C3%A3o_1_.svg);
+	background-repeat: no-repeat;
+	background-position: 22px 50%;
+	background-size: 30px;
+}
+
+.search-gps-hover {
+	background-image: url(../img/icone_localiza%C3%A7%C3%A3o_1_.svg);
+	background-repeat: no-repeat;
+	background-position: 22px 50%;
+	background-size: 30px;
+}
+
+.search-gps-focus {
 	background-image: url(../img/icone_localiza%C3%A7%C3%A3o_1_.svg);
 	background-repeat: no-repeat;
 	background-position: 22px 50%;

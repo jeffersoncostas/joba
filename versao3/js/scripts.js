@@ -5,14 +5,12 @@ function modal() {
 	document.getElementById('body').style.overflow = 'hidden';
 }
 
-
 function closeModal() {
 
 	document.getElementById('modal').className = 'deslizar-esquerda';
 	document.getElementById('bg-fixo').style.display = 'none';
 	document.getElementById('body').style.overflow = 'auto';
 }
-
 
 
 
@@ -31,6 +29,37 @@ function byeContaPopUp() {
 
 }
 
+
+
+function focarPesquisa() {
+
+
+	for (let j = 0; j < pesquisaIcon.length; j++) {
+
+		pesquisaIcon[j].className = 'busc-hover busc';
+
+
+	}
+
+	searchGeral.className = 'busc busc-hover search-geral search-geral-hover';
+	searchGps.className = 'busc busc-hover search-gps search-gps-hover';
+
+}
+
+function fecharPesquisa() {
+
+
+	for (let x = 0; x < pesquisaIcon.length; x++) {
+
+		pesquisaIcon[x].className = 'busc';
+
+
+	}
+	searchGeral.className = 'busc search-geral ';
+	searchGps.className = 'busc  search-gps ';
+}
+
+
 let semContaLink = document.querySelector('.sem-conta');
 let semConta = document.querySelector('.sem-conta-popup');
 let popUpP = document.querySelector('.pop-up-text')
@@ -44,10 +73,17 @@ semContaLink.addEventListener("mouseleave", byeContaPopUp);
 
 
 let pesquisaBar = document.querySelector('.centro');
-let pesquisaIcon = document.querySelector('.busc');
+let pesquisaIcon = document.querySelectorAll('.busc');
+let searchGeral = document.querySelector('.search-geral');
+let searchGps = document.querySelector('.search-gps');
 
+for (let b = 0; b < pesquisaIcon.length; b++) {
 
+	pesquisaIcon[b].addEventListener("mouseover", focarPesquisa);
 
+}
+
+pesquisaBar.addEventListener("mouseleave", fecharPesquisa);
 
 
 
