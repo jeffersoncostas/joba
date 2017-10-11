@@ -15,6 +15,11 @@
 
 	}
 
+	.sem-conta-popup {
+		padding: 10px;
+
+	}
+
 
 }
 
@@ -25,7 +30,10 @@
 
 	}
 
+	.sem-conta-popup {
+		padding: 20px;
 
+	}
 }
 
 #modal {
@@ -234,7 +242,6 @@
 	left: 0;
 	top: 520px;
 	font-family: 'karla';
-	padding: 20px;
 	background-color: rgb(81, 71, 70);
 	height: 100%;
 	width: 480px;
