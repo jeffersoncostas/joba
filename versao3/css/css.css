@@ -31,13 +31,13 @@ body {
 }
 
 .logotipo {
-	padding: 20px 20px 0px;
+	padding: 10px 20px 0px;
 	min-width: 30px;
 }
 
 .logotipo-2 {
 	box-sizing: border-box;
-	padding-top: 15px;
+	padding-top: 5px;
 	min-width: 70px;
 	display: inline-block;
 }
