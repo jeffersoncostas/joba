@@ -15,6 +15,12 @@
 	font-style: normal;
 }
 
+@media screen and (max-width:1366px) {
+	.menu-2 {
+		font-size: 12px;
+	}
+}
+
 body {
 	font-family: 'quicksand'
 }
@@ -200,7 +206,6 @@ body {
 	padding-right: 10px;
 	padding-top: 15px;
 	padding-bottom: 0px;
-	font-size: 17px;
 	color: rgba(255, 255, 255, 0.65);
 	transition: all 0.3s;
 }
