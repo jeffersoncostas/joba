@@ -1,4 +1,11 @@
+//FUNCTIONS
+
+//modal
+
 function modal() {
+	contentModal1.style.display = 'block';
+	contentModal1.style.animationName = '';
+
 
 	document.getElementById('modal').className = 'deslizar-direita';
 	document.getElementById('bg-fixo').style.display = 'block';
@@ -7,12 +14,28 @@ function modal() {
 
 function closeModal() {
 
-	document.getElementById('modal').className = 'deslizar-esquerda';
-	document.getElementById('bg-fixo').style.display = 'none';
-	document.getElementById('body').style.overflow = 'auto';
+	if (contentModal1.style.display == 'none') {
+		document.getElementById('modal').className = 'deslizar-esquerda3';
+		document.getElementById('bg-fixo').style.display = 'none';
+
+		document.getElementById('body').style.overflow = 'auto';
+		voltarModal.style.display = 'none';
+
+	} else {
+		document.getElementById('modal').className = 'deslizar-esquerda';
+		document.getElementById('bg-fixo').style.display = 'none';
+		document.getElementById('body').style.overflow = 'auto';
+		voltarModal.style.display = 'none';
+	}
+
+
+
+
 }
 
 
+
+//modal-sem-conta-popup
 
 function semContaPopUp() {
 
@@ -30,6 +53,7 @@ function byeContaPopUp() {
 }
 
 
+//bar-search
 
 function focarPesquisa() {
 
@@ -60,6 +84,28 @@ function fecharPesquisa() {
 }
 
 
+//expandir-cadastro
+function expandirCadastro() {
+	function displayNone() {
+		contentModal1.style.display = 'none';
+		voltarModal.style.animationName = 'aparecer';
+		contentModal2.style.animationName = 'aparecer';
+
+
+	}
+	contentModal2.style.display = 'block'
+	voltarModal.style.display = 'block';
+	modalEmSi.style.width = '40%';
+	contentModal1.style.animationName = 'desaparecer';
+	setTimeout(displayNone, 700);
+
+}
+
+
+
+
+//modal-sem-conta-popup
+
 let semContaLink = document.querySelector('.sem-conta');
 let semConta = document.querySelector('.sem-conta-popup');
 let popUpP = document.querySelector('.pop-up-text')
@@ -70,7 +116,7 @@ semContaLink.addEventListener("mouseleave", byeContaPopUp);
 
 
 
-
+//bar-search
 
 let pesquisaBar = document.querySelector('.centro');
 let pesquisaIcon = document.querySelectorAll('.busc');
@@ -85,6 +131,17 @@ for (let b = 0; b < pesquisaIcon.length; b++) {
 
 pesquisaBar.addEventListener("mouseleave", fecharPesquisa);
 
+
+
+
+//abrir-cadastro 1
+let voltarModal = document.querySelector('.voltar-modal');
+let contentModal1 = document.querySelector('.content-modal');
+let contentModal2 = document.querySelector('.content-modal-2');
+
+let modalEmSi = document.querySelector('#modal');
+
+semContaLink.addEventListener("click", expandirCadastro)
 
 
 $(function () {
