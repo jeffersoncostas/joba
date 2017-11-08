@@ -1,0 +1,164 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+/*
+@font-face {
+	font-family: quicksand;
+	src: url("font/Quicksand-Regular.otf");
+	font-style: normal;
+}*/
+
+@font-face {
+	font-family: karla;
+	src: url("font/Karla-Regular.ttf");
+	font-style: normal;
+}
+
+body {
+	font-family: 'quicksand'
+}
+
+.menu-modal-bg {
+	display: none;
+	z-index: 9;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.71);
+}
+
+.menu-modal {
+	box-sizing: border-box;
+	user-select: none;
+	flex-wrap: wrap;
+	transform: translateX(-500px);
+	padding-top: 20px;
+	display: none;
+	z-index: 10;
+	position: absolute;
+	width: 50%;
+	height: 100vh;
+
+	background-color: #392e2d;
+	animation-duration: 0.6s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-name: surgir-menu-modal;
+}
+
+
+@keyframes surgir-menu-modal {
+	from {
+		transform: translateX(-500px)
+	}
+	to {
+		transform: translateX(0px)
+	}
+}
+
+@keyframes fechar-menu-modal {
+	to {
+		transform: translateX(-1000px)
+	}
+	from {
+		transform: translateX(0px)
+	}
+}
+
+
+
+.logo-simbolo {
+	display: flex;
+	width: 100%;
+	height: 90px;
+	justify-content: center;
+}
+
+.logo-simbolo img {
+
+	width: 90px;
+	height: 90px;
+}
+
+.menu-modal #ul-menu {
+	position: absolute;
+	top: 140px;
+	width: 100%;
+	list-style: none;
+
+}
+
+.menu-modal #ul-menu li {
+	cursor: pointer;
+	text-align: center;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 20px 10px;
+	font-size: 19px;
+	color: white;
+}
+
+.menu-modal #ul-menu li:first-child {
+	background-color: #FF286D;
+}
+
+.barra-cima {
+	user-select: none;
+	box-sizing: border-box;
+	padding: 0px 20px;
+	position: relative;
+	display: flex;
+	width: 100vw;
+	height: 100px;
+	background-color: #362c2b;
+}
+
+.barra-cima .menu-1 {
+	z-index: 1;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	color: white;
+	font-size: 40px;
+}
+
+.barra-cima .logo-tocaqui {
+
+	box-sizing: border-box;
+	display: flex;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+
+
+}
+
+.barra-cima .logo-tocaqui img {
+	height: 50px;
+
+	align-self: center;
+
+}
+
+.barra-cima .pesquisar {
+	display: flex;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+}
+
+.barra-cima .pesquisar img {
+	padding-right: 20px;
+	position: absolute;
+	right: 0;
+	align-self: center;
+	height: 50px;
+
+}
