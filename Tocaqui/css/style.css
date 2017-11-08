@@ -257,7 +257,59 @@ body {
 /* Oq pode fazer no tocaqui*/
 
 .content-2 {
+	box-sizing: border-box;
+	padding: 15px;
 	border-top: solid 5px #FFAC1C;
 	width: 100%;
+	height: auto;
 	background-color: #e2e2e2;
+}
+
+.content-2 #titulo-do-all {
+
+	text-align: center;
+	color: #141414;
+	font-size: 24px;
+	margin-bottom: 20px;
+
+}
+
+.can-do {
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 5px;
+	justify-content: center;
+	background-color: white;
+	width: 100%;
+	height: 250px;
+	padding: 20px;
+	margin-bottom: 20px;
+
+}
+
+.can-do .img-do {
+	box-sizing: border-box;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+	margin-bottom: 0px;
+}
+
+.can-do .img-do img {
+	height: 80%;
+}
+
+
+.can-do .title-do {
+	margin-bottom: 10px;
+
+	display: block;
+	width: 100%;
+	font-size: 24px;
+}
+
+#text-do span {
+	color: #FFAC1C;
 }
