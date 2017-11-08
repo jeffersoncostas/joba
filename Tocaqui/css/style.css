@@ -4,12 +4,12 @@
 	outline: none;
 }
 
-/*
+
 @font-face {
 	font-family: quicksand;
 	src: url("font/Quicksand-Regular.otf");
 	font-style: normal;
-}*/
+}
 
 @font-face {
 	font-family: karla;
@@ -21,10 +21,12 @@ body {
 	font-family: 'quicksand'
 }
 
+/* Menu sanduiche*/
+
 .menu-modal-bg {
 	display: none;
 	z-index: 9;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.71);
@@ -38,7 +40,7 @@ body {
 	padding-top: 20px;
 	display: none;
 	z-index: 10;
-	position: absolute;
+	position: fixed;
 	width: 50%;
 	height: 100vh;
 
@@ -105,11 +107,15 @@ body {
 	background-color: #FF286D;
 }
 
+
+/*barra horizontal*/
+
 .barra-cima {
+	z-index: 4;
 	user-select: none;
 	box-sizing: border-box;
 	padding: 0px 20px;
-	position: relative;
+	position: fixed;
 	display: flex;
 	width: 100vw;
 	height: 100px;
@@ -141,12 +147,12 @@ body {
 
 .barra-cima .logo-tocaqui img {
 	height: 50px;
-
 	align-self: center;
 
 }
 
 .barra-cima .pesquisar {
+
 	display: flex;
 	position: absolute;
 	height: 100%;
@@ -155,10 +161,103 @@ body {
 }
 
 .barra-cima .pesquisar img {
+	cursor: pointer;
 	padding-right: 20px;
 	position: absolute;
 	right: 0;
 	align-self: center;
 	height: 50px;
 
+}
+
+/* slider principal*/
+
+.slider-principal {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	box-sizing: content-box;
+	padding-top: 100px;
+	width: 100%;
+	background-color: black;
+	height: calc(100vh - 100px);
+}
+
+.slider-principal .text-slider {
+
+	box-sizing: border-box;
+	padding: 20px;
+	z-index: 2;
+	position: absolute;
+	bottom: 10%;
+}
+
+.slider-principal .text-slider span {
+	color: white;
+	font-size: 24px;
+}
+
+.slider-principal .buttons-slider {
+
+	padding-top: 20px;
+}
+
+.slider-principal .button-publicar {
+	cursor: pointer;
+
+	border-radius: 5px;
+	padding: 10px;
+	width: calc(45% - 20px);
+	height: 50px;
+	display: inline-flex;
+	background-color: #FF286D;
+	justify-content: center;
+
+}
+
+.slider-principal .button-publicar span {
+	font-size: 17px;
+	align-self: center;
+}
+
+.slider-principal .button-explorar {
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 10px;
+	width: calc(50% - 20px);
+	height: 50px;
+	display: inline-flex;
+	background-color: #FFAC1C;
+	justify-content: center;
+}
+
+.slider-principal .button-explorar span {
+	font-size: 17px;
+	align-self: center;
+}
+
+
+.slider-principal .dark-image {
+	position: absolute;
+	width: 100%;
+	height: calc(100vh - 100px);
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.28));
+}
+
+.slider-principal .imagens-slider {
+	width: 100%;
+	height: 100%;
+
+	background-image: url(../img/destaque.jpg);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+}
+
+/* Oq pode fazer no tocaqui*/
+
+.content-2 {
+	border-top: solid 5px #FFAC1C;
+	width: 100%;
+	background-color: #e2e2e2;
 }
