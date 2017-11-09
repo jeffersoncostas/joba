@@ -41,6 +41,7 @@ body {
 }
 
 .barra-pesquisa span {
+	box-sizing: border-box;
 	display: block;
 	width: 100%;
 	padding: 20px;
