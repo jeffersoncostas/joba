@@ -115,7 +115,7 @@ body {
 	user-select: none;
 	box-sizing: border-box;
 	padding: 0px 20px;
-	position: absolute;
+	position: fixed;
 	display: flex;
 	width: 100vw;
 	height: 60px;
@@ -178,7 +178,7 @@ body {
 	justify-content: center;
 	position: relative;
 	padding-top: 60px;
-	width: 100vw;
+	width: 100%;
 	background-color: black;
 	height: calc(100vh - 60px);
 }
@@ -326,7 +326,6 @@ footer {
 	box-sizing: border-box;
 	font-family: karla;
 	text-align: center;
-	width: 100vw;
 	height: 150px;
 	background-color: #362c2b;
 
@@ -334,7 +333,6 @@ footer {
 
 footer .imagem-footer {
 	display: flex;
-	width: 100%;
 	height: auto;
 	justify-content: center;
 
