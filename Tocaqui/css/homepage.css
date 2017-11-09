@@ -21,6 +21,58 @@ body {
 	font-family: 'quicksand'
 }
 
+/*Barra de pesquisa*/
+
+.barra-pesquisa {
+	z-index: 4;
+	width: 100%;
+	height: 120px;
+	background-color: #ededed;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(-60px);
+	transition: all 0.7s;
+
+}
+
+.barra-pesquisa-active {
+	transform: translateY(60px);
+}
+
+.barra-pesquisa span {
+	display: block;
+	width: 100%;
+	padding: 20px;
+}
+
+.barra-pesquisa form {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+
+}
+
+.barra-pesquisa form input {
+
+	border-radius: 5px;
+	padding: 0px 50px;
+	box-sizing: border-box;
+
+	width: calc(100% - 20px);
+	height: 40%;
+	border: none;
+	background-image: url(../vectors/lupa-pesquisar-rosa.svg);
+	background-repeat: no-repeat;
+	background-size: 30px;
+
+	background-position: 10px, 50%;
+}
+
+
+
+
 /* Menu sanduiche*/
 
 .menu-modal-bg {
@@ -163,7 +215,7 @@ body {
 
 .barra-cima .pesquisar img {
 	cursor: pointer;
-	padding-right: 40px;
+	padding-right: 20px;
 	position: absolute;
 	right: 0;
 	align-self: center;

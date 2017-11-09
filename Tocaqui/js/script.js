@@ -27,3 +27,28 @@ function fecharMenuModal() {
 	menuModalBg.style.display = 'none'
 	setTimeout(display, 700)
 }
+
+
+
+//Abrir e fechar pesquisa
+
+let barraPesquisa = document.querySelector('.barra-pesquisa');
+
+let buttonPesquisar = document.querySelector('.pesquisar img');
+
+
+buttonPesquisar.addEventListener('click', abrirBarraPesquisa)
+
+
+function abrirBarraPesquisa() {
+
+	if (barraPesquisa.classList.contains('barra-pesquisa-active')) {
+
+		barraPesquisa.classList.remove('barra-pesquisa-active')
+	} else {
+		barraPesquisa.classList.add('barra-pesquisa-active')
+
+	}
+
+
+}
