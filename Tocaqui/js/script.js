@@ -28,7 +28,7 @@ function fecharMenuModal() {
 	setTimeout(display, 700)
 }
 
-
+//
 
 //Abrir e fechar pesquisa
 
@@ -36,19 +36,35 @@ let barraPesquisa = document.querySelector('.barra-pesquisa');
 
 let buttonPesquisar = document.querySelector('.pesquisar img');
 
+let bgBarraPesquisa = document.querySelector('.bg-barra-pesquisa')
 
 buttonPesquisar.addEventListener('click', abrirBarraPesquisa)
 
+bgBarraPesquisa.addEventListener('click', fecharBarraPesquisa)
 
 function abrirBarraPesquisa() {
 
 	if (barraPesquisa.classList.contains('barra-pesquisa-active')) {
 
 		barraPesquisa.classList.remove('barra-pesquisa-active')
+
+		bgBarraPesquisa.style.display = 'none'
+
 	} else {
+		bgBarraPesquisa.style.display = 'block'
 		barraPesquisa.classList.add('barra-pesquisa-active')
 
 	}
 
 
 }
+
+function fecharBarraPesquisa() {
+
+	barraPesquisa.classList.remove('barra-pesquisa-active')
+
+	bgBarraPesquisa.style.display = 'none'
+
+}
+
+//
