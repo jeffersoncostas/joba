@@ -115,7 +115,7 @@ body {
 	user-select: none;
 	box-sizing: border-box;
 	padding: 0px 20px;
-	position: fixed;
+	position: absolute;
 	display: flex;
 	width: 100vw;
 	height: 60px;
@@ -163,7 +163,7 @@ body {
 
 .barra-cima .pesquisar img {
 	cursor: pointer;
-	padding-right: 20px;
+	padding-right: 40px;
 	position: absolute;
 	right: 0;
 	align-self: center;
@@ -177,11 +177,10 @@ body {
 	display: flex;
 	justify-content: center;
 	position: relative;
-	box-sizing: content-box;
-	padding-top: 100px;
-	width: 100%;
+	padding-top: 60px;
+	width: 100vw;
 	background-color: black;
-	height: calc(100vh - 100px);
+	height: calc(100vh - 60px);
 }
 
 .slider-principal .text-slider {
@@ -241,7 +240,7 @@ body {
 .slider-principal .dark-image {
 	position: absolute;
 	width: 100%;
-	height: calc(100vh - 100px);
+	height: calc(100vh - 60px);
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.28));
 }
 
@@ -324,6 +323,7 @@ body {
 /*Footer*/
 
 footer {
+	box-sizing: border-box;
 	font-family: karla;
 	text-align: center;
 	width: 100vw;
@@ -341,7 +341,7 @@ footer .imagem-footer {
 }
 
 footer .imagem-footer img {
-	width: 30%
+	width: 40%
 }
 
 footer span {
