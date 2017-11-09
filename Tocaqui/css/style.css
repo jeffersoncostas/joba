@@ -54,7 +54,7 @@ body {
 
 @keyframes surgir-menu-modal {
 	from {
-		transform: translateX(-500px)
+		transform: translateX(-100%)
 	}
 	to {
 		transform: translateX(0px)
@@ -63,7 +63,7 @@ body {
 
 @keyframes fechar-menu-modal {
 	to {
-		transform: translateX(-1000px)
+		transform: translateX(-100%)
 	}
 	from {
 		transform: translateX(0px)
@@ -310,6 +310,13 @@ body {
 	font-size: 24px;
 }
 
+#text-do {
+	color: #4d4d4d;
+}
+
 #text-do span {
 	color: #FFAC1C;
 }
+
+
+/*Footer*/
