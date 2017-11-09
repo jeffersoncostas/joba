@@ -276,6 +276,7 @@ body {
 }
 
 .can-do {
+	font-family: karla;
 	text-align: center;
 	box-sizing: border-box;
 	border-radius: 5px;
@@ -323,6 +324,7 @@ body {
 /*Footer*/
 
 footer {
+	font-family: karla;
 	text-align: center;
 	width: 100vw;
 	height: 150px;
