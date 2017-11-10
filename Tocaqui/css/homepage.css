@@ -25,12 +25,37 @@ body {
 
 .modal-cadastrar {
 	box-sizing: border-box;
+	display: none;
 	z-index: 3;
 	position: fixed;
 	width: 100%;
 	height: 100vh;
 	padding-top: 60px;
 	background-color: #ededed;
+	transition: all 0.7s;
+
+	transform: translateX(-500px);
+
+	animation-duration: 0.6s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-name: surgir-menu-modal;
+
+}
+
+#close-modalcadastrar {
+	cursor: pointer;
+	z-index: ;
+	display: flex;
+	font-size: 30px;
+	position: absolute;
+	right: 0;
+	top: 70px;
+	justify-content: center;
+	color: white;
+	width: 50px;
+	height: 50px;
+	background-color: #FF286D;
 
 }
 
@@ -41,29 +66,84 @@ body {
 	padding: 40px;
 }
 
-.modal-cadastrar form {
+.cadastro-bp {
+	overflow: auto;
+	box-sizing: border-box;
+	padding: 20px;
+	width: 100%;
+	height: 60%;
+}
+
+.bp-tocaqui {
+	position: relative;
 	display: flex;
+	margin-bottom: 40px;
+}
+
+
+.bp-tocaqui .cadastro-img-tocaqui img {
+	width: 30%;
+}
+
+.bp-tocaqui .cadastro-conversa {
+	position: absolute;
+	align-self: center;
+	left: 50px;
+	background-color: #c3c3c3;
+	padding: 20px;
+	border-radius: 5px;
+	display: inline-flex;
+
+
+}
+
+.cadastro-conversa2 {
+	color: white;
+	position: absolute;
+	align-self: center;
+	left: 50px;
+	padding: 20px;
+	border-radius: 5px;
+	display: inline-flex;
+	background-color: #FFAC1C;
+
+}
+
+.modal-cadastrar form {
+	position: relative;
+	box-sizing: border-box;
 	justify-content: center;
 	width: 100%;
+	padding: 0px 20px;
 }
 
 .modal-cadastrar form input {
-	width: 70%;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
 	height: 70px;
+	font-size: 16px;
 	border: none;
 	border-radius: 5px;
-	padding: 0px 50px;
-	background-image: url(../vectors/lupa-pesquisar-rosa.svg);
-	background-repeat: no-repeat;
-	background-size: 30px;
+	padding: 0px 110px 0px 30px;
 
-	background-position: 10px, 50%;
+}
+
+.button-enviar-modal-cadastro {
+	text-align: center;
+	width: 100px;
+	cursor: pointer;
+	font-size: 24px;
+	position: absolute;
+	right: 30px;
+	top: 30%;
 }
 
 /*Barra de pesquisa*/
 
 .barra-pesquisa {
-	z-index: 4;
+	z-index: 3;
 	width: 100%;
 	height: 120px;
 	background-color: #ededed;
@@ -113,7 +193,7 @@ body {
 
 .bg-barra-pesquisa {
 	display: none;
-	z-index: 3;
+	z-index: 2;
 	position: fixed;
 	width: 100%;
 	height: 100vh;
@@ -136,14 +216,13 @@ body {
 	box-sizing: border-box;
 	user-select: none;
 	flex-wrap: wrap;
-	transform: translateX(-500px);
 	padding-top: 20px;
 	display: none;
 	z-index: 10;
 	position: fixed;
 	width: 70%;
 	height: 100vh;
-
+	transform: translateX(-500px);
 	background-color: #392e2d;
 	animation-duration: 0.6s;
 	animation-fill-mode: forwards;
@@ -287,7 +366,7 @@ body {
 
 	box-sizing: border-box;
 	padding: 20px;
-	z-index: 2;
+	z-index: 1;
 	position: absolute;
 	bottom: 10%;
 }

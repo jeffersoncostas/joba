@@ -68,3 +68,57 @@ function fecharBarraPesquisa() {
 }
 
 //
+
+
+//Abrir e fechar cadastro
+
+let modalCadastrar = document.querySelector('.modal-cadastrar');
+
+let buttonCadastrar = document.querySelector('#button-cadastrar');
+
+let buttonCloseModalCadastrar = document.querySelector('#close-modalcadastrar');
+
+let buttonPublicarIdeiaHome = document.querySelector('#button-publicar-home')
+
+let buttonExplorarIdeiaHome = document.querySelector('#button-explorar-home')
+
+
+
+buttonCadastrar.addEventListener('click', abrirModalCadastrar);
+
+buttonPublicarIdeiaHome.addEventListener('click', abrirModalCadastrar)
+
+buttonExplorarIdeiaHome.addEventListener('click', abrirModalCadastrar)
+
+
+buttonCloseModalCadastrar.addEventListener('click', fecharModalCadastrar)
+
+function abrirModalCadastrar() {
+	if (menuModal.style.display != 'flex') {
+		console.log('entrou')
+
+
+		modalCadastrar.style.display = 'block';
+
+	} else {
+
+		fecharMenuModal()
+		modalCadastrar.style.display = 'block';
+	}
+
+
+
+}
+
+
+function fecharModalCadastrar() {
+	console.log('entrei')
+
+	function display() {
+		modalCadastrar.style.display = 'none';
+		modalCadastrar.style.animationName = '';
+	}
+	modalCadastrar.style.animationName = 'fechar-menu-modal';
+
+	setTimeout(display, 700)
+}
