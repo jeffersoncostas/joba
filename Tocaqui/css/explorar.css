@@ -18,7 +18,8 @@
 }
 
 body {
-	font-family: 'quicksand'
+	font-family: 'quicksand';
+	position: relative;
 }
 
 /**/
@@ -338,6 +339,7 @@ body {
 	box-sizing: border-box;
 	padding: 120px 20px 20px;
 	overflow: auto;
+	margin-bottom: 60px
 }
 
 .lista-ideias .titulo-lista-ideia {
@@ -362,87 +364,126 @@ body {
 	border-radius: 5px;
 	font-family: karla;
 	box-sizing: border-box;
+	max-height: 60px;
+	overflow: hidden;
 	width: 100%;
-	min-height: 350px;
 	padding: 20px;
 	background-color: #f4f4f4;
-}
-
-.ideia-content .imagem-ideia-content {
-	width: 100%;
-	height: 45%;
 	margin-bottom: 20px;
-
+	transition: all 0.7s;
 }
 
-.ideia-content .imagem-ideia-content img {
-
+.a-ideia-content {
+	border-radius: 5px;
+	font-family: karla;
+	box-sizing: border-box;
+	overflow: hidden;
 	width: 100%;
-	height: 100%;
+	padding: 20px;
+	background-color: #f4f4f4;
+	margin-bottom: 20px;
+	transition: all 0.7s;
+	max-height: 560px;
+
 }
 
-.ideia-content .titulo-ideia-content {
-	font-size: 21px;
+
+
+.titulo-ideia-content {
+	font-size: 20px;
 	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.criador-ideia-content {
 	margin-bottom: 10px;
 }
 
-.ideia-content .criador-ideia-content {
-	margin-bottom: 10px;
-}
-
-.ideia-content .criador-ideia-content span {
+.criador-ideia-content span {
 	color: #FF286D;
 }
 
-.ideia-content .habilidade-criador-ideia-content {
+.habilidade-criador-ideia-content {
 	margin-bottom: 20px;
 }
 
-.ideia-content .habilidade-criador-ideia-content span {
+.habilidade-criador-ideia-content span {
 	color: #191919;
 }
 
-.ideia-content .descricao-ideia-content {
-
+.descricao-ideia-content {
+	font-size: 15px;
 	margin-bottom: 10px;
 }
 
-.ideia-content .precisa-ideia-content {
-	font-size: 20px;
+.precisa-ideia-content {
+	font-size: 17px;
 	font-variant: small-caps;
 	margin-bottom: 10px
 }
 
 
-.ideia-content .precisa-ideia-content span {
+.precisa-ideia-content span {
 	color: #FFAC1C;
 	font-variant: small-caps;
 }
 
-.ideia-content .pessoas-ideia-content{
+.pessoas-ideia-content {
 	margin-bottom: 20px;
 }
-.ideia-content .pessoas-ideia-content span{
+
+.pessoas-ideia-content span {
 	color: #1ebeae;
-	font-size: 20px;
-	
+	font-size: 17px;
+
 }
 
-.ideia-content .button-entrar-ideia-content {
+.button-entrar-ideia-content {
+	cursor: pointer;
 	border-radius: 2px;
 	display: flex;
 	justify-content: center;
 	width: 100%;
 	background-color: #48D9CB;
 	height: 40px;
-	font-size: 24px;
+	font-size: 23px;
 
 }
 
-.ideia-content .button-entrar-ideia-content span {
+.button-entrar-ideia-content span {
 	align-self: center;
 	font-variant: small-caps;
-
 	color: white;
 }
+
+
+
+/*Footer*/
+
+footer {
+	box-sizing: border-box;
+	font-family: karla;
+	text-align: center;
+	height: 150px;
+	width: 100%;
+	background-color: #362c2b;
+
+}
+
+footer .imagem-footer {
+	display: flex;
+	height: auto;
+	justify-content: center;
+
+}
+
+footer .imagem-footer img {
+	width: 40%
+}
+
+footer span {
+	font-size: 13px;
+	color: white;
+}
+
+//

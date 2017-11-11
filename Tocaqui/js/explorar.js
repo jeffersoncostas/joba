@@ -84,6 +84,8 @@ function fecharBarraPesquisa() {
 
 //
 
+
+
 // Expandir categorias de ideias 
 
 let buttonTitleCategorias = document.querySelector('.title-categorias');
@@ -113,3 +115,36 @@ function expandirCategorias() {
 
 
 }
+
+// 
+
+
+
+// expandir ideia 
+
+let ideiaContent = document.querySelectorAll('.ideia-content');
+let buttonTituloIdeiaContent = document.querySelectorAll('.titulo-ideia-content');
+
+for (let i = 0; i < buttonTituloIdeiaContent.length; i++) {
+	buttonTituloIdeiaContent[i].addEventListener('click', function () {
+		expandirIdeia(i)
+	})
+
+}
+
+
+
+function expandirIdeia(j) {
+
+	if (ideiaContent[j].classList.contains('a-ideia-content')) {
+
+		ideiaContent[j].classList.remove('a-ideia-content')
+		ideiaContent[j].classList.add('ideia-content')
+
+	} else {
+		ideiaContent[j].classList.remove('ideia-content')
+		ideiaContent[j].classList.add('a-ideia-content')
+
+	}
+}
+//
