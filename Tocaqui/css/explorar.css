@@ -408,6 +408,8 @@ input[type="checkbox"]:checked + label:before {
 
 
 .titulo-ideia-content {
+	user-select: none;
+	cursor: pointer;
 	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 15px;
