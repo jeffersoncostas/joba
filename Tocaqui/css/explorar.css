@@ -1,0 +1,345 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+
+@font-face {
+	font-family: quicksand;
+	src: url("font/Quicksand-Regular.otf");
+	font-style: normal;
+}
+
+@font-face {
+	font-family: karla;
+	src: url("font/Karla-Regular.ttf");
+	font-style: normal;
+}
+
+body {
+	font-family: 'quicksand'
+}
+
+/**/
+
+/*Barra de pesquisa*/
+
+.barra-pesquisa {
+
+	display: none;
+	z-index: 4;
+	width: 100%;
+	height: 120px;
+	background-color: #ededed;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(-60px);
+	transition: all 0.7s;
+
+}
+
+.barra-pesquisa-active {
+	transform: translateY(60px);
+}
+
+.barra-pesquisa span {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	padding: 20px;
+}
+
+.barra-pesquisa form {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+
+}
+
+.barra-pesquisa form input {
+
+	border-radius: 5px;
+	padding: 0px 50px;
+	box-sizing: border-box;
+
+	width: calc(100% - 40px);
+	height: 40%;
+	border: none;
+	background-image: url(../vectors/lupa-pesquisar-rosa.svg);
+	background-repeat: no-repeat;
+	background-size: 30px;
+
+	background-position: 10px, 50%;
+}
+
+
+.bg-barra-pesquisa {
+	display: none;
+	z-index: 2;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.71);
+
+}
+
+/**/
+
+/* Menu sanduiche*/
+
+.menu-modal-bg {
+	display: none;
+	z-index: 9;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.71);
+}
+
+.menu-modal {
+	box-sizing: border-box;
+	user-select: none;
+	flex-wrap: wrap;
+	padding-top: 20px;
+	display: none;
+	z-index: 10;
+	position: fixed;
+	width: 70%;
+	height: 100vh;
+	transform: translateX(-500px);
+	background-color: #392e2d;
+	animation-duration: 0.6s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-name: surgir-menu-modal;
+}
+
+
+@keyframes surgir-menu-modal {
+	from {
+		transform: translateX(-100%)
+	}
+	to {
+		transform: translateX(0px)
+	}
+}
+
+@keyframes fechar-menu-modal {
+	to {
+		transform: translateX(-100%)
+	}
+	from {
+		transform: translateX(0px)
+	}
+}
+
+
+
+.logo-simbolo {
+	display: flex;
+	width: 100%;
+	height: 90px;
+	justify-content: center;
+}
+
+.logo-simbolo img {
+
+	width: 90px;
+	height: 90px;
+}
+
+.menu-modal #ul-menu {
+	position: absolute;
+	top: 140px;
+	width: 100%;
+	list-style: none;
+
+}
+
+.menu-modal #ul-menu li {
+	cursor: pointer;
+	text-align: center;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 20px 10px;
+	font-size: 19px;
+	color: white;
+}
+
+.menu-modal #ul-menu li:first-child {
+	background-color: #FF286D;
+}
+
+/**/
+
+/*barra horizontal*/
+
+.barra-cima {
+	z-index: 4;
+	user-select: none;
+	box-sizing: border-box;
+	padding: 0px 20px;
+	position: fixed;
+	display: flex;
+	width: 100vw;
+	height: 60px;
+	background-color: #362c2b;
+}
+
+.barra-cima .menu-1 {
+	z-index: 1;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	color: white;
+	font-size: 25px;
+
+}
+
+.barra-cima .logo-tocaqui {
+
+	box-sizing: border-box;
+	display: flex;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+
+
+}
+
+.barra-cima .logo-tocaqui img {
+	height: 40px;
+	align-self: center;
+
+}
+
+.barra-cima .pesquisar {
+
+	display: flex;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+}
+
+.barra-cima .pesquisar img {
+	cursor: pointer;
+	padding-right: 20px;
+	position: absolute;
+	right: 0;
+	align-self: center;
+	height: 25px;
+
+}
+
+/**/
+
+/*Explorar ideias - categorias*/
+
+.categorias {
+	z-index: 3;
+	overflow: hidden;
+	box-sizing: border-box;
+	position: fixed;
+	padding: 80px 20px 20px;
+	height: 100vh;
+	width: 100%;
+	background-color: #ededed;
+	max-height: 120px;
+	transition: all 0.7s;
+}
+
+.categorias-expandir {
+	z-index: 3;
+
+	overflow: auto;
+	box-sizing: border-box;
+	position: absolute;
+	padding: 80px 20px 20px;
+	height: 100vh;
+	width: 100%;
+	background-color: #ededed;
+	transition: all 0.7s;
+	max-height: 1500px;
+
+
+}
+
+.button-ok-categorias {
+	user-select: none;
+	cursor: pointer;
+	display: none;
+	justify-content: center;
+	background-color: #FF286D;
+	color: white;
+	font-size: 20px;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.28);
+}
+
+.button-ok-categorias span {
+	align-self: center;
+
+}
+
+.title-categorias {
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 20px;
+
+}
+
+#lista-categorias {
+	font-family: karla;
+
+	width: 100%;
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+#lista-categorias span {
+	color: #959595;
+	display: block;
+	margin-bottom: 10px;
+}
+
+#lista-categorias li {
+	display: block;
+	box-sizing: border-box;
+	padding: 0px 20px 14px;
+	font-size: 16px;
+}
+
+#lista-categorias li input {
+	border: none;
+	width: 18px;
+	height: 18px;
+
+}
+
+/**/
+
+/* Lista de ideias*/
+
+.lista-ideias {
+	box-sizing: border-box;
+	padding: 140px 20px;
+}
+
+.lista-ideias .titulo-lista-ideia {
+	font-size: 24px;
+	text-align: center;
+}
