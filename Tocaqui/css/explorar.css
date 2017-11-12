@@ -392,6 +392,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .a-ideia-content {
+
 	border-radius: 5px;
 	font-family: karla;
 	box-sizing: border-box;
@@ -401,7 +402,7 @@ input[type="checkbox"]:checked + label:before {
 	background-color: #f4f4f4;
 	margin-bottom: 20px;
 	transition: all 0.7s;
-	max-height: 560px;
+	max-height: calc(100vh - 145px);
 
 }
 
@@ -458,7 +459,18 @@ input[type="checkbox"]:checked + label:before {
 
 }
 
+.ver-mais-ideia-content {
+	user-select: none;
+	cursor: pointer;
+	margin-bottom: 20px;
+	text-align: center;
+	text-decoration: underline;
+	text-decoration: none;
+
+}
+
 .button-entrar-ideia-content {
+
 	cursor: pointer;
 	user-select: none;
 	border-radius: 2px;
@@ -471,7 +483,12 @@ input[type="checkbox"]:checked + label:before {
 
 }
 
+a:visited {
+	color: black;
+}
+
 .button-entrar-ideia-content span {
+
 	align-self: center;
 	font-variant: small-caps;
 	color: white;
