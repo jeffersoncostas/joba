@@ -85,6 +85,7 @@ body {
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.71);
 
+
 }
 
 /**/
@@ -191,6 +192,7 @@ body {
 }
 
 .barra-cima .menu-1 {
+	font-family: arial;
 	z-index: 1;
 	box-sizing: border-box;
 	cursor: pointer;
@@ -237,6 +239,7 @@ body {
 	align-self: center;
 	height: 25px;
 
+
 }
 
 /**/
@@ -266,9 +269,9 @@ body {
 	height: 100vh;
 	width: 100%;
 	background-color: #ededed;
+
 	transition: all 0.7s;
 	max-height: 1500px;
-
 
 }
 
@@ -296,10 +299,24 @@ body {
 
 .title-categorias {
 	cursor: pointer;
-	display: block;
-	text-align: center;
+	display: flex;
+	width: 100%;
 	font-size: 24px;
 	margin-bottom: 20px;
+	justify-content: center;
+
+}
+
+.expandir-icon {
+	display: inline-block;
+	align-self: center;
+	background-image: url(../vectors/expandir-icon.svg);
+	background-repeat: no-repeat;
+	filter: hue-rotate();
+	margin-left: 10px;
+	height: 25px;
+	width: 25px;
+	background-position: 0;
 
 }
 
@@ -357,7 +374,8 @@ input[type="checkbox"]:checked + label:before {
 	box-sizing: border-box;
 	padding: 120px 20px 20px;
 	overflow: auto;
-	margin-bottom: 60px
+	margin-bottom: 60px;
+
 }
 
 .lista-ideias .titulo-lista-ideia {
@@ -403,6 +421,7 @@ input[type="checkbox"]:checked + label:before {
 	margin-bottom: 20px;
 	transition: all 0.7s;
 	max-height: calc(100vh - 145px);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.18);
 
 }
 
@@ -499,6 +518,7 @@ a:visited {
 /*Footer*/
 
 footer {
+
 	box-sizing: border-box;
 	font-family: karla;
 	text-align: center;

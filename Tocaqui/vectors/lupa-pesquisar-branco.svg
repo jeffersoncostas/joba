@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="451.039 60.05 40.541 40.555">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: none;
-        stroke: #fff;
-        stroke-miterlimit: 10;
-        stroke-width: 2px;
-      }
-    </style>
-  </defs>
-  <g id="icone_pesquisar_1_" transform="translate(463.617 72.678)">
-    <path id="Path_5" data-name="Path 5" class="cls-1" d="M66.145,66.21a2.242,2.242,0,0,1-1.364.7,1.511,1.511,0,0,1-1.224-.35L50.515,53.552a1.614,1.614,0,0,1-.315-.524,12.286,12.286,0,0,0,1.434-1.294c.455-.455.874-.944,1.294-1.434a1.317,1.317,0,0,1,.524.315L66.459,63.622A1.834,1.834,0,0,1,66.145,66.21Z" transform="translate(-39.907 -40.004)"/>
-    <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="10.28" cy="10.28" r="10.28" transform="translate(-11.163 3.325) rotate(-45)"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188.74 181.74"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:10px;}</style></defs><title>lupa-pesquisar-branco</title><g id="Camada_2" data-name="Camada 2"><g id="ícones"><g id="icone_pesquisar" data-name="icone pesquisar"><path class="cls-1" d="M173.06,173.06a12.32,12.32,0,0,1-7,3.6,7.26,7.26,0,0,1-6.23-1.86l-66-66a6.37,6.37,0,0,1-1.61-2.74,80.26,80.26,0,0,0,13.8-13.8,6.37,6.37,0,0,1,2.74,1.61l66,66C178,163,177.18,168.93,173.06,173.06Z"/><circle class="cls-1" cx="57.05" cy="57.05" r="52.05" transform="translate(-23.63 57.05) rotate(-45)"/></g><g id="icone_pesquisar-2" data-name="icone pesquisar"><path class="cls-1" d="M180.06,173.06a12.32,12.32,0,0,1-7,3.6,7.26,7.26,0,0,1-6.23-1.86l-66-66a6.37,6.37,0,0,1-1.61-2.74,80.26,80.26,0,0,0,13.8-13.8,6.37,6.37,0,0,1,2.74,1.61l66,66C185,163,184.18,168.93,180.06,173.06Z"/><circle class="cls-1" cx="64.05" cy="57.05" r="52.05" transform="translate(-21.58 62) rotate(-45)"/></g></g></g></svg>

@@ -31,6 +31,9 @@ function fecharMenuModal() {
 //
 
 //Abrir e fechar pesquisa
+let ListaIdeias = document.querySelector('.lista-ideias');
+
+let footer = document.querySelector('footer');
 
 let barraPesquisa = document.querySelector('.barra-pesquisa');
 
@@ -52,6 +55,8 @@ function abrirBarraPesquisa() {
 		barraPesquisa.classList.remove('barra-pesquisa-active')
 
 		bgBarraPesquisa.style.display = 'none';
+		ListaIdeias.style.filter = '';
+		footer.style.filter = '';
 
 		setTimeout(display, 700)
 
@@ -64,6 +69,8 @@ function abrirBarraPesquisa() {
 
 		bgBarraPesquisa.style.display = 'block'
 		barraPesquisa.style.display = 'block'
+		ListaIdeias.style.filter = 'blur(2px)'
+		footer.style.filter = 'blur(2px)'
 
 
 		setTimeout(display, 10)
@@ -75,10 +82,16 @@ function abrirBarraPesquisa() {
 }
 
 function fecharBarraPesquisa() {
-
+	function display() {
+		barraPesquisa.style.display = ''
+	}
 	barraPesquisa.classList.remove('barra-pesquisa-active')
 
 	bgBarraPesquisa.style.display = 'none'
+	ListaIdeias.style.filter = '';
+	footer.style.filter = '';
+
+	setTimeout(display, 700)
 
 }
 
