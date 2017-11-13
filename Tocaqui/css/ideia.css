@@ -254,7 +254,6 @@ body {
 .content-voltar {
 	display: flex;
 	user-select: none;
-	cursor: pointer;
 	font-variant-caps: all-small-caps;
 	font-size: 17px;
 	font-weight: 600;
@@ -267,6 +266,7 @@ body {
 }
 
 #voltar-icon {
+	cursor: pointer;
 	padding-right: 10px;
 }
 
@@ -378,6 +378,8 @@ body {
 
 
 .participantes-pagina-ideia {
+	background-color: #fdfdfd;
+
 	height: 80px;
 	padding: 10px 10px 0px;
 	box-sizing: border-box;
@@ -401,10 +403,31 @@ body {
 	padding-right: 20px;
 }
 
+.chat-pagina-ideia {
+	background-color: #fdfdfd;
 
-.descricao-pagina-ideia {}
+	cursor: pointer;
+	height: 80px;
+	padding: 10px 10px 0px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	margin-bottom: 40px;
+}
 
-#id-subdivisor-pagina-ideia {
+.chat-pagina-ideia img {
+	height: 60px;
+	width: 60px;
+	float: left;
+	padding-right: 20px;
+}
+
+.cards-pagina-ideia {
+	margin-bottom: 40px;
+
+}
+
+
+.id-subdivisor-pagina-ideia {
 	display: inline-flex;
 	background-color: #626262;
 	height: 40px;
@@ -414,10 +437,61 @@ body {
 	margin-bottom: 10px;
 }
 
-#id-descricao-text-pagina-ideia {
+
+#id-imagem-pagina-ideia {
+	width: 100%;
+	max-width: 560px;
+	max-height: 350px;
+	margin-bottom: 30px;
+}
+
+#id-descricao-text-pagina-ideia,
+.id-qprecisa-pagina-ideia {
 	font-family: karla;
 	display: block;
 	text-align-last: left;
 
 	text-align: justify;
+}
+
+
+.id-qprecisa-pagina-ideia {
+	font-variant: small-caps;
+	font-size: 20px;
+	color: #FFAC1C;
+}
+
+.botao-participar-pagina-ideia {
+	user-select: none;
+	cursor: pointer;
+	width: 100%;
+	border: 2px solid #FF286D;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+
+	animation-name: aumentar-diminuir;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+}
+
+@keyframes aumentar-diminuir {
+
+	0% {
+		transform: scale(0.98, 0.98)
+	}
+	50% {
+		transform: scale(1, 1)
+	}
+	100% {
+		transform: scale(0.98, 0.98)
+	}
+}
+
+.botao-participar-pagina-ideia span {
+	align-self: center;
+	font-variant-caps: all-small-caps;
+	display: flex;
+	font-size: 20px;
 }
