@@ -17,9 +17,13 @@
 	font-style: normal;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	font-family: 'quicksand';
-	position: relative;
+	height: 100%;
 }
 
 /**/
@@ -322,7 +326,6 @@ body {
 
 #lista-categorias {
 	font-family: karla;
-
 	width: 100%;
 	list-style: none;
 	margin-bottom: 10px;
@@ -367,6 +370,8 @@ input[type="checkbox"]:checked + label:before {
 
 
 /**/
+
+/*content-all*/
 
 /* Lista de ideias*/
 
@@ -518,30 +523,32 @@ a:visited {
 /*Footer*/
 
 footer {
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 
 	box-sizing: border-box;
+	padding: 10px;
 	font-family: karla;
 	text-align: center;
-	height: 150px;
 	width: 100%;
 	background-color: #362c2b;
 
 }
 
 footer .imagem-footer {
-	display: flex;
+	padding-top: 130px;
 	height: auto;
-	justify-content: center;
+	width: 100%;
 
 }
 
 footer .imagem-footer img {
-	width: 40%
+	max-width: 190px;
 }
 
 footer span {
 	font-size: 13px;
 	color: white;
 }
-
-//
