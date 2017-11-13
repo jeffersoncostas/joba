@@ -1,0 +1,35 @@
+{
+	"name": "Tocaqui!",
+	"short_name": "Tocaqui!",
+	"start_url": "ideia.html",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#fdfdfd",
+	"theme_color": "#362c2b",
+	"icons": [
+		{
+			"src": "icons/96.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+
+		{
+			"src": "icons/144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+
+		{
+			"src": "icons/256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+
+		{
+			"src": "icons/512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+
+}

@@ -6,13 +6,13 @@
 
 
 @font-face {
-	font-family: quicksand;
+	font-family: 'quicksand';
 	src: url("font/Quicksand-Regular.otf");
 	font-style: normal;
 }
 
 @font-face {
-	font-family: karla;
+	font-family: 'karla';
 	src: url("font/Karla-Regular.ttf");
 	font-style: normal;
 }

@@ -450,8 +450,7 @@ body {
 	font-family: karla;
 	display: block;
 	text-align-last: left;
-
-	text-align: justify;
+	background-image: url(../) text-align: justify;
 }
 
 
