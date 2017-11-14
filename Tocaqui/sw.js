@@ -10,7 +10,6 @@ self.addEventListener('install', function (event) {
 			//		cache.add('/')
 
 			cache.addAll([
-				'/',
 			'/vectors/toca-aqui-logo-simbolo.svg',
 			'/vectors/toca-aqui-logo.svg',
 			'/vectors/lupa-pesquisar-branco.svg',
