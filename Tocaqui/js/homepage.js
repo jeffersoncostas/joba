@@ -198,8 +198,8 @@ let valueNome = null;
 let valueEmail = null;
 let valueSenha = null;
 
-inputCadastrarBp.addEventListener('keydown', function (e) {
-	enviarPorEnter(e)
+inputCadastrarBp.addEventListener('keydown', function (event) {
+	enviarPorEnter(event)
 })
 
 inputCadastrarBp.addEventListener('click', mobileScrollTeclado)
@@ -212,12 +212,12 @@ function mobileScrollTeclado() {
 		modalCadastrar.scrollTop = modalCadastrar.scrollHeight;
 
 	}
-	setTimeout(scroll1(), 500)
+	setTimeout(scroll1, 500)
 }
 
 function enviarPorEnter(event) {
 
-	if (event.which == 13 || e.which == 10) {
+	if (event.which == 13 || event.which == 10) {
 
 		enviarNomeEmail()
 		event.stopImmediatePropagation();
