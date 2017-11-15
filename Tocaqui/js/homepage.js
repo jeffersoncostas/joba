@@ -187,7 +187,7 @@ function aparecerPrimeiraMsg() {
 
 let inputCadastrarBp = document.querySelector('#input-cadastrar-bp')
 
-
+let formInput = document.querySelector('#form-input-cadastrar')
 
 let buttonEnviarModalCadastro = document.querySelector('.button-enviar-modal-cadastro');
 
@@ -202,13 +202,13 @@ inputCadastrarBp.addEventListener('keydown', function (e) {
 	enviarPorEnter(e)
 })
 
-inputCadastrarBp.addEventListener('mouseenter', mobileScrollTeclado())
+inputCadastrarBp.addEventListener('click', mobileScrollTeclado)
 
 
 buttonEnviarModalCadastro.addEventListener('click', enviarNomeEmail)
 
 function mobileScrollTeclado() {
-	alert('entrei')
+	alert('entrei as')
 	modalCadastrar.scrollTop = modalCadastrar.scrollHeight;
 
 }
