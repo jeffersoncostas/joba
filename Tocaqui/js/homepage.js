@@ -95,6 +95,8 @@ function fecharBarraPesquisa() {
 
 //Abrir e fechar cadastro
 
+let SaberExplorarPostar = 1;
+
 let modalCadastrar = document.querySelector('.modal-cadastrar');
 
 let buttonCadastrar = document.querySelector('#button-cadastrar');
@@ -109,7 +111,7 @@ let buttonExplorarIdeiaHome = document.querySelector('#button-explorar-home')
 
 buttonCadastrar.addEventListener('click', abrirModalCadastrar);
 
-buttonPublicarIdeiaHome.addEventListener('click', abrirModalCadastrar)
+buttonPublicarIdeiaHome.addEventListener('click', abrirModalCadastrar4)
 
 buttonExplorarIdeiaHome.addEventListener('click', abrirModalCadastrar)
 
@@ -117,6 +119,7 @@ buttonExplorarIdeiaHome.addEventListener('click', abrirModalCadastrar)
 buttonCloseModalCadastrar.addEventListener('click', fecharModalCadastrar)
 
 function abrirModalCadastrar() {
+	SaberExplorarPostar = 1;
 	if (menuModal.style.display != 'flex') {
 		console.log('entrou')
 		modalLoginOuCadastrar.style.display = 'flex'
@@ -136,6 +139,27 @@ function abrirModalCadastrar() {
 
 }
 
+function abrirModalCadastrar4() {
+	SaberExplorarPostar = 2;
+
+	if (menuModal.style.display != 'flex') {
+		console.log('entrou')
+		modalLoginOuCadastrar.style.display = 'flex'
+
+
+		modalCadastrar.style.display = 'block';
+
+	} else {
+
+		fecharMenuModal()
+		modalLoginOuCadastrar.style.display = 'flex'
+
+		modalCadastrar.style.display = 'block';
+	}
+
+
+
+}
 
 function fecharModalCadastrar() {
 	console.log('entrei')
@@ -250,24 +274,52 @@ function enviarNomeEmail() {
 
 	} else if (valueNome != null && valueEmail == null && valueSenha == null) {
 
-
+		let emailExistente = null;
 		let valueInputCadastrarBp = document.querySelector('#input-cadastrar-bp').value.trim();
 
-
-		if (valueInputCadastrarBp.length != 0 && valueInputCadastrarBp.length >= 3 && valueInputCadastrarBp.includes('@') && valueInputCadastrarBp.includes('.com')) {
-			mostrarNaTelaCadastroUsuario(valueInputCadastrarBp);
-			mostrarMensagemSucesso(4);
-			valueEmail = valueInputCadastrarBp;
-
-			inputCadastrarBp.type = 'password';
-			inputCadastrarBp.placeholder = 'digite sua senha';
-			inputCadastrarBp.value = '';
-			inputCadastrarBp.style.backgroundImage = "url('vectors/senha-usuario.svg')"
+		$.ajax({
+			type: 'GET',
+			url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+			success: function (data) {
+				for (let i = 0; i < data.length; i++) {
 
 
-		} else {
-			mostrarErrosCadastro(9)
+					if (data[i].email == valueInputCadastrarBp) {
+						console.log('é igual')
+						emailExistente = 1
+					}
+
+				}
+
+
+				finalizarEmail()
+
+			}
+		});
+
+		function finalizarEmail() {
+
+
+
+
+			if (valueInputCadastrarBp.length != 0 && valueInputCadastrarBp.length >= 3 && valueInputCadastrarBp.includes('@') && valueInputCadastrarBp.includes('.com') && emailExistente == null) {
+				mostrarNaTelaCadastroUsuario(valueInputCadastrarBp);
+				mostrarMensagemSucesso(4);
+				valueEmail = valueInputCadastrarBp;
+
+				inputCadastrarBp.type = 'password';
+				inputCadastrarBp.placeholder = 'digite sua senha';
+				inputCadastrarBp.value = '';
+				inputCadastrarBp.style.backgroundImage = "url('vectors/senha-usuario.svg')"
+
+
+			} else {
+				mostrarErrosCadastro(9)
+			}
+
 		}
+
+
 
 
 	} else if (valueNome != null && valueEmail != null && valueSenha == null) {
@@ -370,23 +422,52 @@ function requisicaoCadastrar(fullName, email, password) {
 
 
 
-	$.ajax({
-		type: 'POST',
-		url: 'https://jsonplaceholder.typicode.com/tocaqui/teste',
-		data: {
-			'idUser': '2',
-			'name': fullName,
-			'email': email,
-			'senha': password,
-			'minhasIdeias': [''],
-			'ideiasParticipo': ['']
-		},
-		success: function (data) {
 
-			console.log(data)
+	$.ajax({
+		type: 'GET',
+		url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+		success: function (data) {
+			let userId = parseInt(data[data.length - 1].idUser);
+
+			let idusuario = userId + 1;
+
+			enviarAoserv(idusuario);
 
 		}
 	});
+
+
+	function enviarAoserv(iduser) {
+		$.ajax({
+			type: 'POST',
+			url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+			data: {
+				'idUser': iduser,
+				'name': fullName,
+				'email': email,
+				'senha': password,
+				'minhasIdeias': [''],
+				'ideiasParticipo': ['']
+			},
+			success: function (data) {
+
+				function mudarlink() {
+
+					if (SaberExplorarPostar == 1) {
+						window.location.replace("explorar.html")
+
+					} else {
+						window.location.replace("postar-ideia.html")
+					}
+
+				};
+
+				setTimeout(mudarlink, 700)
+
+			}
+		});
+	}
+
 
 }
 
