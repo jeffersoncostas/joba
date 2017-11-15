@@ -367,16 +367,24 @@ function mostrarNaTelaCadastroUsuario(dados) {
 }
 
 function requisicaoCadastrar(fullName, email, password) {
+
+
+
 	$.ajax({
 		type: 'POST',
-		url: 'https://rest.learncode.academy/api/tocaqui/teste',
+		url: 'https://jsonplaceholder.typicode.com/tocaqui/teste',
 		data: {
-			'id': '2',
+			'idUser': '2',
 			'name': fullName,
 			'email': email,
 			'senha': password,
 			'minhasIdeias': [''],
 			'ideiasParticipo': ['']
+		},
+		success: function (data) {
+
+			console.log(data)
+
 		}
 	});
 
