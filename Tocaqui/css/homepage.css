@@ -45,6 +45,7 @@ body {
 }
 
 #close-modalcadastrar {
+	user-select: none;
 	border-radius: 50%;
 	cursor: pointer;
 	z-index: 5;
@@ -83,6 +84,7 @@ body {
 
 .button-ja-possui-conta,
 .button-nao-possui-conta {
+	user-select: none;
 	cursor: pointer;
 	z-index: 4;
 	align-self: center;
@@ -241,6 +243,7 @@ body {
 }
 
 .button-enviar-modal-cadastro {
+	user-select: none;
 	text-align: center;
 	width: 100px;
 	cursor: pointer;
@@ -444,7 +447,7 @@ body {
 }
 
 .barra-cima .pesquisar {
-
+	user-select: none;
 	display: flex;
 	position: absolute;
 	height: 100%;
