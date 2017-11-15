@@ -230,6 +230,7 @@ function enviarNomeEmail() {
 
 			inputCadastrarBp.placeholder = 'digite seu e-mail';
 			inputCadastrarBp.value = '';
+			inputCadastrarBp.style.backgroundImage = "url('../vectors/email-usuario.svg')"
 
 		} else {
 			mostrarErrosCadastro(7)
@@ -250,6 +251,8 @@ function enviarNomeEmail() {
 			inputCadastrarBp.type = 'password';
 			inputCadastrarBp.placeholder = 'digite sua senha';
 			inputCadastrarBp.value = '';
+			inputCadastrarBp.style.backgroundImage = "url('../vectors/senha-usuario.svg')"
+
 
 		} else {
 			mostrarErrosCadastro(9)
