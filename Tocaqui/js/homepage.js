@@ -369,7 +369,7 @@ function mostrarNaTelaCadastroUsuario(dados) {
 function requisicaoCadastrar(fullName, email, password) {
 	$.ajax({
 		type: 'POST',
-		url: 'http://rest.learncode.academy/api/tocaqui/teste',
+		url: 'https://rest.learncode.academy/api/tocaqui/teste',
 		data: {
 			'id': '2',
 			'name': fullName,

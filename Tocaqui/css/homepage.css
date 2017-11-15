@@ -45,6 +45,7 @@ body {
 }
 
 #close-modalcadastrar {
+	border-radius: 50%;
 	cursor: pointer;
 	z-index: 5;
 	display: flex;
@@ -69,7 +70,7 @@ body {
 	justify-content: center;
 	z-index: 3;
 	position: absolute;
-	background-color: white;
+	background-color: #362c2b;
 	width: 100%;
 	height: calc(100vh - 60px);
 	padding: 0px 20px;
@@ -91,8 +92,8 @@ body {
 	width: 50%;
 	height: 60px;
 	padding: 20px;
-	background-color: #357bff;
-	border: 2px solid #357bff;
+	background-color: #554342;
+	border: 2px solid #FFAC1C;
 	margin-left: 10px;
 	font-size: 19px;
 	color: white;
@@ -110,7 +111,8 @@ body {
 }
 
 .button-nao-possui-conta {
-	background-color: #4b3c3b;
+	border: 2px solid #FF286D;
+
 
 
 }
