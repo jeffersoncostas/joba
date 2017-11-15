@@ -119,6 +119,7 @@ buttonCloseModalCadastrar.addEventListener('click', fecharModalCadastrar)
 function abrirModalCadastrar() {
 	if (menuModal.style.display != 'flex') {
 		console.log('entrou')
+		modalLoginOuCadastrar.style.display = 'flex'
 
 
 		modalCadastrar.style.display = 'block';
@@ -126,6 +127,8 @@ function abrirModalCadastrar() {
 	} else {
 
 		fecharMenuModal()
+		modalLoginOuCadastrar.style.display = 'flex'
+
 		modalCadastrar.style.display = 'block';
 	}
 
@@ -145,3 +148,211 @@ function fecharModalCadastrar() {
 
 	setTimeout(display, 700)
 }
+
+
+// Abrir a o cadastro em si ( conversa) 
+
+let modalLoginOuCadastrar = document.querySelector('.modal-login-ou-cadastrar');
+
+let buttonJaPossuiConta = document.querySelector('.button-ja-possui-conta');
+
+let buttonNaoPossuiConta = document.querySelector('.button-nao-possui-conta');
+
+buttonNaoPossuiConta.addEventListener('click', abrirModalCadastrar2)
+
+function abrirModalCadastrar2() {
+	function display() {
+		modalLoginOuCadastrar.style.display = 'none'
+		modalLoginOuCadastrar.style.animationName = ''
+	}
+
+	modalLoginOuCadastrar.style.animationName = 'desaparecer-cima';
+	setTimeout(display, 700)
+
+	aparecerPrimeiraMsg()
+}
+
+//
+
+// Realizar cadastro
+
+function aparecerPrimeiraMsg() {
+	bpTocaqui[0].style.display = 'flex'
+	bpTocaqui[0].style.animationName = 'aparecer-msg-cadastro'
+
+	bpTocaqui[1].style.display = 'flex'
+	bpTocaqui[1].style.animationName = 'aparecer-msg-cadastro'
+
+}
+
+let inputCadastrarBp = document.querySelector('#input-cadastrar-bp')
+
+
+
+let buttonEnviarModalCadastro = document.querySelector('.button-enviar-modal-cadastro');
+
+let bpTocaqui = document.querySelectorAll('.bp-tocaqui');
+
+
+let valueNome = null;
+let valueEmail = null;
+let valueSenha = null;
+
+inputCadastrarBp.addEventListener('keydown', function (e) {
+	enviarPorEnter(e)
+})
+
+buttonEnviarModalCadastro.addEventListener('click', enviarNomeEmail)
+
+function enviarPorEnter(event) {
+
+	if (event.which == 13 || e.which == 10) {
+
+		enviarNomeEmail()
+		event.stopImmediatePropagation();
+		event.preventDefault();
+	}
+
+}
+
+function enviarNomeEmail() {
+	if (valueNome == null && valueEmail == null && valueSenha == null) {
+
+
+		let valueInputCadastrarBp = document.querySelector('#input-cadastrar-bp').value.trim();
+
+
+		if (valueInputCadastrarBp.length != 0 && valueInputCadastrarBp.length >= 3) {
+			mostrarNaTelaCadastroUsuario(valueInputCadastrarBp)
+			mostrarMensagemSucesso(2);
+
+			valueNome = valueInputCadastrarBp;
+
+			inputCadastrarBp.placeholder = 'digite seu e-mail';
+			inputCadastrarBp.value = '';
+
+		} else {
+			mostrarErrosCadastro(7)
+		}
+
+
+	} else if (valueNome != null && valueEmail == null && valueSenha == null) {
+
+
+		let valueInputCadastrarBp = document.querySelector('#input-cadastrar-bp').value.trim();
+
+
+		if (valueInputCadastrarBp.length != 0 && valueInputCadastrarBp.length >= 3 && valueInputCadastrarBp.includes('@') && valueInputCadastrarBp.includes('.com')) {
+			mostrarNaTelaCadastroUsuario(valueInputCadastrarBp);
+			mostrarMensagemSucesso(4);
+			valueEmail = valueInputCadastrarBp;
+
+			inputCadastrarBp.type = 'password';
+			inputCadastrarBp.placeholder = 'digite sua senha';
+			inputCadastrarBp.value = '';
+
+		} else {
+			mostrarErrosCadastro(8)
+		}
+
+
+	} else if (valueNome != null && valueEmail != null && valueSenha == null) {
+
+
+		let valueInputCadastrarBp = document.querySelector('#input-cadastrar-bp').value.trim();
+
+
+		if (valueInputCadastrarBp.length != 0 && valueInputCadastrarBp.length >= 6) {
+
+			let valueProtegido = '******'
+			console.log(valueProtegido)
+			mostrarNaTelaCadastroUsuario(valueProtegido);
+			mostrarMensagemSucesso(6);
+			valueSenha = valueInputCadastrarBp;
+
+
+
+		} else {
+			mostrarErrosCadastro(10)
+		}
+
+
+	}
+
+
+
+}
+
+
+function mostrarErrosCadastro(numx) {
+	let cadastroBPContent = document.querySelector('.cadastro-bp')
+
+	let cloneNode = bpTocaqui[numx];
+
+	cadastroBPContent.appendChild(cloneNode)
+
+	cloneNode.style.display = 'flex'
+	cloneNode.style.animationName = 'aparecer-msg-cadastro'
+	cadastroBPContent.scrollTop = cadastroBPContent.scrollHeight;
+}
+
+function mostrarMensagemSucesso(msgSucesso, proximo) {
+	let cadastroBPContent = document.querySelector('.cadastro-bp')
+
+	let cloneNode = bpTocaqui[msgSucesso];
+	let cloneNode2 = bpTocaqui[msgSucesso + 1];
+
+
+	cadastroBPContent.appendChild(cloneNode)
+	cadastroBPContent.appendChild(cloneNode2)
+
+	cloneNode.style.display = 'flex'
+	cloneNode.style.animationName = 'aparecer-msg-cadastro'
+
+	cloneNode2.style.display = 'flex'
+	cloneNode2.style.animationName = 'aparecer-msg-cadastro'
+	cadastroBPContent.scrollTop = cadastroBPContent.scrollHeight;
+}
+
+function mostrarNaTelaCadastroUsuario(dados) {
+
+	let cadastroBPContent = document.querySelector('.cadastro-bp')
+	let bpTocaquiUserCreate = document.createElement('div');
+
+	let cadastroImgTocaqui2Create = document.createElement('div');
+
+	let imgBpUserCreate = document.createElement('img');
+
+	let cadastroConversa2Create = document.createElement('div');
+
+	let spanCadastroConversa2 = document.createElement('span');
+
+	let spanText = document.createTextNode(dados)
+
+	imgBpUserCreate.src = 'vectors/user.svg';
+
+	spanCadastroConversa2.appendChild(spanText)
+	spanCadastroConversa2.classList.add('cadastro-conversa-bp');
+
+	cadastroConversa2Create.appendChild(spanCadastroConversa2);
+	cadastroConversa2Create.classList.add('cadastro-conversa2');
+
+	cadastroImgTocaqui2Create.appendChild(imgBpUserCreate);
+	cadastroImgTocaqui2Create.classList.add('cadastro-img-tocaqui2');
+
+
+
+	bpTocaquiUserCreate.appendChild(cadastroImgTocaqui2Create);
+	bpTocaquiUserCreate.appendChild(cadastroConversa2Create);
+
+	bpTocaquiUserCreate.classList.add('bp-tocaqui-user')
+
+	cadastroBPContent.appendChild(bpTocaquiUserCreate)
+	cadastroBPContent.scrollTop = cadastroBPContent.scrollHeight;
+}
+
+
+
+//let xhttpEnviarCadastro= new XMLHttpRequest();
+//
+//xhttpEnviarCadastro.onreadystatechange=function(){}

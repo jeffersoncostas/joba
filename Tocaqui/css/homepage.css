@@ -45,11 +45,11 @@ body {
 
 #close-modalcadastrar {
 	cursor: pointer;
-	z-index: ;
+	z-index: 5;
 	display: flex;
 	font-size: 30px;
 	position: absolute;
-	right: 0;
+	right: 20px;
 	top: 70px;
 	justify-content: center;
 	color: white;
@@ -58,6 +58,76 @@ body {
 	background-color: #FF286D;
 
 }
+
+
+/*Logar ou cadastrar*/
+
+.modal-login-ou-cadastrar {
+	display: flex;
+	box-sizing: border-box;
+	justify-content: center;
+	z-index: 3;
+	position: absolute;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	padding: 0px 20px;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+
+}
+
+
+.button-ja-possui-conta,
+.button-nao-possui-conta {
+	cursor: pointer;
+	z-index: 4;
+	align-self: center;
+	display: flex;
+	justify-content: center;
+
+	width: 50%;
+	height: 60px;
+	padding: 20px;
+	background-color: #357bff;
+	border: 2px solid #357bff;
+	margin-left: 10px;
+	font-size: 19px;
+	color: white;
+	border-radius: 5px;
+
+
+
+
+}
+
+.button-ja-possui-conta span,
+.button-nao-possui-conta span {
+	text-align: center;
+	align-self: center;
+}
+
+.button-nao-possui-conta {
+	background-color: #4b3c3b;
+
+
+}
+
+@keyframes desaparecer-cima {
+	0% {
+		opacity: 1;
+		transform: translate(1px, 1%)
+	}
+
+	100% {
+		opacity: 0;
+		transform: translate(1px, -10%)
+	}
+
+}
+
+/**/
 
 .modal-cadastrar .titulo-cadastro {
 	font-size: 24px;
@@ -76,14 +146,34 @@ body {
 
 .bp-tocaqui {
 	position: relative;
-	display: flex;
+	display: none;
 	margin-bottom: 40px;
+	animation-duration: 0.7s;
+	animation-fill-mode: backwards;
+	animation-iteration-count: 1;
+
+}
+
+@keyframes aparecer-msg-cadastro {
+	0% {
+		opacity: 0;
+		transform: translate(0px, 20px);
+
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0px);
+
+	}
+
 }
 
 
 .bp-tocaqui .cadastro-img-tocaqui img {
 	width: 30%;
 }
+
+
 
 .bp-tocaqui .cadastro-conversa {
 	position: absolute;
@@ -95,6 +185,15 @@ body {
 	display: inline-flex;
 
 
+}
+
+.bp-tocaqui-user {
+	position: relative;
+	display: flex;
+	margin-bottom: 40px;
+	animation-duration: 0.7s;
+	animation-fill-mode: backwards;
+	animation-iteration-count: 1;
 }
 
 .cadastro-conversa2 {
@@ -109,11 +208,16 @@ body {
 
 }
 
+.bp-tocaqui-user .cadastro-img-tocaqui2 img {
+	width: 30%;
+}
+
 .modal-cadastrar form {
 	position: relative;
 	box-sizing: border-box;
 	justify-content: center;
 	width: 100%;
+	bottom: 0px;
 	padding: 0px 20px;
 }
 
@@ -126,8 +230,11 @@ body {
 	font-size: 16px;
 	border: none;
 	border-radius: 5px;
-	padding: 0px 110px 0px 30px;
-
+	padding: 0px 110px 0px 70px;
+	background-image: url('../vectors/nome-usuario-icon.svg');
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px 10px
 }
 
 .button-enviar-modal-cadastro {
@@ -145,12 +252,12 @@ body {
 .barra-pesquisa {
 	z-index: 3;
 	width: 100%;
-	height: 120px;
+	height: 150px;
 	background-color: #ededed;
 	position: fixed;
 	justify-content: center;
 	align-items: center;
-	transform: translateY(-60px);
+	transform: translateY(-100%);
 	transition: all 0.7s;
 
 }
@@ -175,7 +282,7 @@ body {
 }
 
 .barra-pesquisa form input {
-
+	box-sizing: border-box;
 	border-radius: 5px;
 	padding: 0px 50px;
 	box-sizing: border-box;
@@ -273,6 +380,7 @@ body {
 }
 
 .menu-modal #ul-menu li {
+	user-select: none;
 	cursor: pointer;
 	text-align: center;
 	align-items: center;
@@ -302,6 +410,7 @@ body {
 }
 
 .barra-cima .menu-1 {
+	user-select: none;
 	z-index: 1;
 	box-sizing: border-box;
 	cursor: pointer;
@@ -341,6 +450,7 @@ body {
 }
 
 .barra-cima .pesquisar img {
+	user-select: none;
 	cursor: pointer;
 	padding-right: 20px;
 	position: absolute;
