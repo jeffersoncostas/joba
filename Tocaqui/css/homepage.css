@@ -21,6 +21,8 @@ body {
 	font-family: 'quicksand'
 }
 
+
+
 /*Modal cadastrar*/
 
 .modal-cadastrar {
@@ -543,10 +545,11 @@ body {
 	width: 100%;
 	height: 100%;
 
-	background-image: url(../img/destaque.jpg);
+	background-image: url(../img/tocaqui2.png);
 	background-repeat: no-repeat;
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-size: cover;
+	background-position: -300px, 0px;
 }
 
 /* Oq pode fazer no tocaqui*/
@@ -640,4 +643,27 @@ footer .imagem-footer img {
 footer span {
 	font-size: 13px;
 	color: white;
+}
+
+/*MEDIA QUERY  HOMEPAGE*/
+
+/*Media para o slider de imagens*/
+
+@media screen and (min-width: 852px) {
+
+	.slider-principal .imagens-slider {
+
+		width: 100%;
+		height: 100%;
+
+		background-image: url(../img/tocaqui2.png);
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: cover;
+		background-position: 0px, 0px;
+
+
+
+	}
+
 }
