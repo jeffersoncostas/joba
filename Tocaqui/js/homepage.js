@@ -202,7 +202,16 @@ inputCadastrarBp.addEventListener('keydown', function (e) {
 	enviarPorEnter(e)
 })
 
+inputCadastrarBp.addEventListener('mouseenter', mobileScrollTeclado())
+
+
 buttonEnviarModalCadastro.addEventListener('click', enviarNomeEmail)
+
+function mobileScrollTeclado() {
+	alert('entrei')
+	modalCadastrar.scrollTop = modalCadastrar.scrollHeight;
+
+}
 
 function enviarPorEnter(event) {
 
