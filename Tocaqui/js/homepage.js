@@ -252,7 +252,7 @@ function enviarNomeEmail() {
 			inputCadastrarBp.value = '';
 
 		} else {
-			mostrarErrosCadastro(8)
+			mostrarErrosCadastro(9)
 		}
 
 
