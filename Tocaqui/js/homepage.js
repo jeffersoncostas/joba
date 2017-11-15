@@ -208,8 +208,11 @@ inputCadastrarBp.addEventListener('click', mobileScrollTeclado)
 buttonEnviarModalCadastro.addEventListener('click', enviarNomeEmail)
 
 function mobileScrollTeclado() {
-	modalCadastrar.scrollTop = modalCadastrar.scrollHeight;
+	function scroll1() {
+		modalCadastrar.scrollTop = modalCadastrar.scrollHeight;
 
+	}
+	setTimeout(scroll1(), 500)
 }
 
 function enviarPorEnter(event) {
