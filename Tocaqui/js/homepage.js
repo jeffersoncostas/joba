@@ -281,10 +281,11 @@ function enviarNomeEmail() {
 			let valueProtegido = '******'
 			console.log(valueProtegido)
 			mostrarNaTelaCadastroUsuario(valueProtegido);
-			mostrarMensagemSucesso(6);
+
 			valueSenha = valueInputCadastrarBp;
 
-
+			requisicaoCadastrar(valueNome, valueEmail, valueSenha);
+			mostrarMensagemSucesso(6);
 
 		} else {
 			mostrarErrosCadastro(10)
@@ -363,6 +364,22 @@ function mostrarNaTelaCadastroUsuario(dados) {
 
 	cadastroBPContent.appendChild(bpTocaquiUserCreate)
 	cadastroBPContent.scrollTop = cadastroBPContent.scrollHeight;
+}
+
+function requisicaoCadastrar(fullName, email, password) {
+	$.ajax({
+		type: 'POST',
+		url: 'http://rest.learncode.academy/api/tocaqui/teste',
+		data: {
+			'id': '2',
+			'name': fullName,
+			'email': email,
+			'senha': password,
+			'minhasIdeias': [''],
+			'ideiasParticipo': ['']
+		}
+	});
+
 }
 
 
