@@ -161,3 +161,9 @@ function expandirIdeia(j) {
 	}
 }
 //
+
+//  resgatar dados do localstorage
+
+let userDataExplorar = JSON.parse(localStorage.userData);
+
+console.log(userDataExplorar)

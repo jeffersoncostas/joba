@@ -32,8 +32,8 @@ body {
 	z-index: 3;
 	position: fixed;
 	width: 100%;
-	height: 100%;
-	padding-top: 60px;
+	height: 100vh;
+	padding: 60px 20px;
 	background-color: #ededed;
 	transition: all 0.7s;
 
@@ -64,6 +64,11 @@ body {
 
 }
 
+#close-modalcadastrar span {
+	position: absolute;
+	top: 10%;
+}
+
 
 /*Logar ou cadastrar*/
 
@@ -73,10 +78,10 @@ body {
 	justify-content: center;
 	z-index: 3;
 	position: absolute;
+	left: 0;
 	background-color: #362c2b;
 	width: 100%;
 	height: calc(100vh - 60px);
-	padding: 0px 20px;
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 	animation-iteration-count: 1;
@@ -92,13 +97,13 @@ body {
 	align-self: center;
 	display: flex;
 	justify-content: center;
-
-	width: 50%;
-	height: 60px;
+	box-sizing: border-box;
+	width: 60%;
+	height: 100px;
 	padding: 20px;
+	margin: 7px;
 	background-color: #554342;
 	border: 2px solid #FFAC1C;
-	margin-left: 10px;
 	font-size: 19px;
 	color: white;
 	border-radius: 5px;
@@ -134,21 +139,129 @@ body {
 
 }
 
+
+
 /**/
 
-.modal-cadastrar .titulo-cadastro {
+/* Login */
+
+.modal-login {
+	display: none;
+	left: 0;
+	box-sizing: border-box;
+	justify-content: center;
+	z-index: 2;
+	position: absolute;
+	background-color: #ededed;
+	width: 100%;
+	height: calc(100vh - 60px);
+	padding: 0px 20px;
+
+
+}
+
+.content-modal-login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 110px 20px;
+}
+
+.content-modal-login form {
+	width: 100%;
+}
+
+.content-modal-login form input {
+	display: block;
+	font-size: 16px;
+
+	box-sizing: border-box;
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 70px;
+
+	padding: 0px 110px 0px 70px;
+	background-image: url('../vectors/senha-usuario.svg');
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+}
+
+.content-modal-login form input:first-child {
+	margin-bottom: 50px;
+	background-image: url('../vectors/email-usuario.svg');
+
+}
+
+.erros-modal-login {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background-color: #f8253d;
+	display: none;
+	border: 2px solid white;
+	;
+	color: white;
+	margin-bottom: 20px;
+
+}
+
+.erros-modal-login span {
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 17px;
+}
+
+.button-content-login {
+
+	cursor: pointer;
+	user-select: none;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: #FFAC1C;
+	color: white;
+	height: 80px;
+	font-size: 23px;
+}
+
+.button-content-login span {
+	font-variant-caps: all-small-caps;
+	align-self: center;
+
+}
+
+
+/**/
+
+.titulo-cadastro {
 	font-size: 24px;
 	text-align: center;
 	box-sizing: border-box;
-	padding: 40px;
+	padding: 30px;
+	width: 100%;
+	height: 80px;
+	border-bottom: 2px solid #FFAC1C;
 }
 
 .cadastro-bp {
 	overflow: auto;
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 30px 0px;
 	width: 100%;
-	height: 60%;
+	height: 70%;
 }
 
 .bp-tocaqui {
@@ -219,15 +332,15 @@ body {
 	width: 30%;
 }
 
-.modal-cadastrar form {
+.modal-cadastrar #form-input-cadastrar {
 	position: relative;
+	bottom: -50px;
 	box-sizing: border-box;
 	justify-content: center;
 	width: 100%;
-	padding: 0px 20px;
 }
 
-.modal-cadastrar form input {
+.modal-cadastrar #form-input-cadastrar input {
 	box-sizing: border-box;
 	position: relative;
 	display: block;
@@ -390,11 +503,9 @@ body {
 .menu-modal #ul-menu li {
 	user-select: none;
 	cursor: pointer;
-	text-align: center;
-	align-items: center;
 	box-sizing: border-box;
-	padding: 20px 10px;
-	font-size: 19px;
+	padding: 20px 50px;
+	font-size: 15px;
 	color: white;
 }
 

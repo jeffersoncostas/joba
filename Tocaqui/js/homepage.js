@@ -16,6 +16,14 @@ if ('serviceWorker' in navigator) {
 
 }
 
+// logar com localstorage
+
+if (localStorage.userData != null) {
+
+	window.location.replace("explorar.html")
+
+}
+
 
 //
 
@@ -167,6 +175,8 @@ function fecharModalCadastrar() {
 	function display() {
 		modalCadastrar.style.display = 'none';
 		modalCadastrar.style.animationName = '';
+		modalContentLogin.style.display = '';
+
 	}
 	modalCadastrar.style.animationName = 'fechar-menu-modal';
 
@@ -183,6 +193,7 @@ let buttonJaPossuiConta = document.querySelector('.button-ja-possui-conta');
 let buttonNaoPossuiConta = document.querySelector('.button-nao-possui-conta');
 
 buttonNaoPossuiConta.addEventListener('click', abrirModalCadastrar2)
+buttonJaPossuiConta.addEventListener('click', abrirModalLogina)
 
 function abrirModalCadastrar2() {
 	function display() {
@@ -196,7 +207,105 @@ function abrirModalCadastrar2() {
 	aparecerPrimeiraMsg()
 }
 
+function abrirModalLogina() {
+	function display() {
+		modalLoginOuCadastrar.style.display = 'none'
+		modalLoginOuCadastrar.style.animationName = ''
+	}
+
+	modalLoginOuCadastrar.style.animationName = 'desaparecer-cima';
+	modalContentLogin.style.display = 'flex';
+	setTimeout(display, 700)
+
+}
 //
+
+
+
+//// LOGIN 
+let modalContentLogin = document.querySelector('.modal-login');
+let buttonContentLogin = document.querySelector('.button-content-login');
+
+buttonContentLogin.addEventListener('click', logarModalLogin);
+
+function logarModalLogin() {
+	let loginInputEmail = document.querySelector('#login-input-email').value;
+	let loginInputPassword = document.querySelector('#login-input-password').value;
+	$.ajax({
+		type: 'GET',
+		url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+		success: function (data) {
+
+			for (let i = 0; i < data.length; i++) {
+
+				if (data[i].email == loginInputEmail && data[i].senha == loginInputPassword) {
+
+					console.log('logou')
+
+					let UserStorage = {
+						'idUser': data[i].idUser,
+						'name': data[i].name,
+						'email': data[i].email,
+						'senha': data[i].senha,
+						'sobre': data[i].sobre,
+						'conquistas': data[i].conquistas,
+						'minhasIdeias': data[i].minhasIdeias,
+						'ideiasParticipo': data[i].ideiasParticipo
+					}
+
+					localStorage.userData = JSON.stringify(UserStorage);
+
+					console.log(localStorage.userData)
+
+					function mudarlink() {
+
+						if (SaberExplorarPostar == 1) {
+							window.location.replace("explorar.html")
+
+
+						} else {
+							window.location.replace("postar-ideia.html")
+
+						}
+
+					};
+
+
+					mudarlink()
+
+					break
+
+
+
+				} else {
+
+
+
+					$(".erros-modal-login").slideDown("slow");
+
+
+					function desaparecer() {
+						$(".erros-modal-login").slideUp("slow");
+
+
+					}
+
+					setTimeout(desaparecer, 2000)
+				}
+
+
+
+			}
+
+		}
+	});
+
+
+
+
+}
+
+
 
 // Realizar cadastro
 
@@ -268,7 +377,7 @@ function enviarNomeEmail() {
 			inputCadastrarBp.style.backgroundImage = "url('vectors/email-usuario.svg')"
 
 		} else {
-			mostrarErrosCadastro(7)
+			mostrarErrosCadastro(11)
 		}
 
 
@@ -446,10 +555,27 @@ function requisicaoCadastrar(fullName, email, password) {
 				'name': fullName,
 				'email': email,
 				'senha': password,
+				'sobre': '',
+				'conquistas': '',
 				'minhasIdeias': [''],
 				'ideiasParticipo': ['']
 			},
 			success: function (data) {
+
+				let UserStorage = {
+					'idUser': iduser,
+					'name': fullName,
+					'email': email,
+					'senha': password,
+					'sobre': '',
+					'conquistas': [''],
+					'minhasIdeias': [''],
+					'ideiasParticipo': ['']
+				}
+
+				localStorage.userData = JSON.stringify(UserStorage);
+
+				console.log(localStorage.userData)
 
 				function mudarlink() {
 
@@ -464,15 +590,10 @@ function requisicaoCadastrar(fullName, email, password) {
 
 				setTimeout(mudarlink, 700)
 
+
 			}
 		});
 	}
 
 
 }
-
-
-
-//let xhttpEnviarCadastro= new XMLHttpRequest();
-//
-//xhttpEnviarCadastro.onreadystatechange=function(){}
