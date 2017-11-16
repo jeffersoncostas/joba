@@ -164,6 +164,59 @@ function expandirIdeia(j) {
 
 //  resgatar dados do localstorage
 
-let userDataExplorar = JSON.parse(localStorage.userData);
+let userDataExplorar = null;
 
-console.log(userDataExplorar)
+//userDataExplorar = JSON.parse(localStorage.userData);
+
+testar12()
+let lStorageUser = localStorage.userData = JSON.stringify(userDataExplorar)
+
+
+let l2StorageUser = JSON.parse(lStorageUser)
+
+if (localStorage.userData != null) {
+
+	console.log('entrei')
+	console.log(lStorageUser)
+
+	alterarPaginaUserName()
+	aparecerIdeias()
+
+}
+
+
+function testar12() {
+	userDataExplorar = {
+		'idUser': '1',
+		'name': 'Jefferson Costa',
+		'email': 'jefferson@mail.com',
+		'senha': '123456',
+		'sobre': 'Sou uma pessoa muito legal eheheheh',
+		'conquistas': ['1', '2'],
+		'minhasIdeias': [''],
+		'ideiasParticipo': ['']
+	}
+
+}
+
+
+function alterarPaginaUserName() {
+
+	let spanUserNameMenu = document.createElement('span')
+	let userNameMenu = document.querySelector('.user-name-menu')
+	let spanText = document.createTextNode(l2StorageUser.name)
+	spanUserNameMenu.appendChild(spanText)
+	userNameMenu.appendChild(spanUserNameMenu)
+
+}
+
+function aparecerIdeias() {
+
+	$.ajax({
+		type: 'GET',
+		url: 'http://rest.learncode.academy/api/tocaqui/teste-ideias/',
+		success: function (data) {
+
+		}
+	});
+}
