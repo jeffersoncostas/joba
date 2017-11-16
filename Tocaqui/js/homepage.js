@@ -1,3 +1,18 @@
+$(".loadings")
+	.css("display", "flex")
+	.fadeIn();
+
+$.ajax({
+	type: 'GET',
+	url: 'http://rest.learncode.academy/api/tocaqui/teste-ideias3/',
+	success: function (data) {
+		$(".loadings")
+			.css("display", "flex")
+			.fadeOut();
+
+	}
+})
+
 // service worker pwa
 
 if ('serviceWorker' in navigator) {
