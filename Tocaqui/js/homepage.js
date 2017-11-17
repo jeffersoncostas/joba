@@ -3,8 +3,9 @@ $(".loadings")
 	.fadeIn();
 
 $.ajax({
+
 	type: 'GET',
-	url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+	url: 'http://www.corsproxy.com/' + 'http://rest.learncode.academy/api/tocaqui/teste4/',
 	success: function (data) {
 		$(".loadings")
 			.css("display", "flex")
