@@ -135,31 +135,38 @@ function expandirCategorias() {
 
 // expandir ideia 
 
-let ideiaContent = document.querySelectorAll('.ideia-content');
-let buttonTituloIdeiaContent = document.querySelectorAll('.titulo-ideia-content');
+function expandirIdeiaAposRequis() {
 
-for (let i = 0; i < buttonTituloIdeiaContent.length; i++) {
-	buttonTituloIdeiaContent[i].addEventListener('click', function () {
-		expandirIdeia(i)
-	})
+	let ideiaContent = document.querySelectorAll('.ideia-content');
+	let buttonTituloIdeiaContent = document.querySelectorAll('.titulo-ideia-content');
 
-}
-
-
-
-function expandirIdeia(j) {
-
-	if (ideiaContent[j].classList.contains('a-ideia-content')) {
-
-		ideiaContent[j].classList.remove('a-ideia-content')
-		ideiaContent[j].classList.add('ideia-content')
-
-	} else {
-		ideiaContent[j].classList.remove('ideia-content')
-		ideiaContent[j].classList.add('a-ideia-content')
+	for (let i = 0; i < buttonTituloIdeiaContent.length; i++) {
+		buttonTituloIdeiaContent[i].addEventListener('click', function () {
+			expandirIdeia(i)
+		})
 
 	}
+
+
+
+	function expandirIdeia(j) {
+
+		if (ideiaContent[j].classList.contains('a-ideia-content')) {
+
+			ideiaContent[j].classList.remove('a-ideia-content')
+			ideiaContent[j].classList.add('ideia-content')
+
+		} else {
+			ideiaContent[j].classList.remove('ideia-content')
+			ideiaContent[j].classList.add('a-ideia-content')
+
+		}
+	}
+
+
 }
+
+
 //
 
 //  resgatar dados do localstorage
@@ -226,7 +233,7 @@ function aparecer1() {
 			for (let i = 0; i < data.length; i++) {
 
 				let participantesContar = null;
-				for (let x = 0; x < data[i].participantes; x++) {
+				for (let x = 0; x < data[i].participantes.length; x++) {
 
 					participantesContar++
 
@@ -238,7 +245,7 @@ function aparecer1() {
 
 			}
 
-
+			expandirIdeiaAposRequis()
 
 		}
 	});
@@ -249,9 +256,14 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 	let ListaIdeias =
 		document.querySelector('.lista-ideias');
 
+	let ideiaContent = document.createElement('div')
+	ideiaContent.classList.add('ideia-content');
+
+	ListaIdeias.appendChild(ideiaContent);
+
 	// titulo e span titulo
 	let tituloIdeiaContent = document.createElement('div');
-	let tituloIdeiaContentSpan = document.createElement('div');
+	let tituloIdeiaContentSpan = document.createElement('span');
 	let spanTituloText = document.createTextNode(titulo);
 	let spanButton = document.createElement('span');
 
@@ -262,7 +274,7 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 	tituloIdeiaContent.classList.add('titulo-ideia-content');
 	spanButton.classList.add('expandir-icon');
 
-	ListaIdeias.appendChild(tituloIdeiaContent);
+	ideiaContent.appendChild(tituloIdeiaContent);
 
 
 	//criador
@@ -275,7 +287,7 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 
 	criadorIdeiaContent.classList.add('criador-ideia-content');
 
-	ListaIdeias.appendChild(criadorIdeiaContent);
+	ideiaContent.appendChild(criadorIdeiaContent);
 
 
 	//habilidades do criador
@@ -288,7 +300,7 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 
 	habilidadeCriadorIdeiaContent.classList.add("habilidade-criador-ideia-content")
 
-	ListaIdeias.appendChild(habilidadeCriadorIdeiaContent);
+	ideiaContent.appendChild(habilidadeCriadorIdeiaContent);
 
 
 
@@ -300,7 +312,7 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 
 	descricaoIdeiaContent.classList.add('descricao-ideia-content');
 
-	ListaIdeias.appendChild(descricaoIdeiaContent);
+	ideiaContent.appendChild(descricaoIdeiaContent);
 
 
 
@@ -314,7 +326,7 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 
 	precisaIdeiaContent.classList.add('precisa-ideia-content');
 
-	ListaIdeias.appendChild(precisaIdeiaContent);
+	ideiaContent.appendChild(precisaIdeiaContent);
 
 
 
@@ -328,7 +340,7 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 
 	pessoasIdeiaContent.classList.add('pessoas-ideia-content');
 
-	ListaIdeias.appendChild(pessoasIdeiaContent);
+	ideiaContent.appendChild(pessoasIdeiaContent);
 
 
 
@@ -346,6 +358,8 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 	verMaisIdeiaContent.classList.add('ver-mais-ideia-content');
 
 
+	ideiaContent.appendChild(verMaisIdeiaContent);
+
 	// botao entrar na ideia content 
 
 	let buttonEntrarIdeia = document.createElement('div');
@@ -356,7 +370,8 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 
 	buttonEntrarIdeiaSpan.appendChild(SpanButtonEntrarText);
 	buttonEntrarIdeia.appendChild(buttonEntrarIdeiaSpan);
+	buttonEntrarIdeia.classList.add('button-entrar-ideia-content')
 
-	ListaIdeias.appendChild(buttonEntrarIdeia);
+	ideiaContent.appendChild(buttonEntrarIdeia);
 
 }

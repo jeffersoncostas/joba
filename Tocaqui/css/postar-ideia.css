@@ -297,6 +297,7 @@ body {
 }
 
 .postar-ideia-content form input {
+
 	padding: 20px;
 	box-sizing: border-box;
 	font-size: 15px;
@@ -308,7 +309,12 @@ body {
 	margin-bottom: 25px;
 	transition: all 0.1s;
 	color: white;
+	resize: none;
 
+}
+
+.text-area-descricao {
+	resize: none;
 }
 
 #id-descricao-postar-ideia {

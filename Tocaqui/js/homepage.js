@@ -4,12 +4,13 @@ $(".loadings")
 
 $.ajax({
 	type: 'GET',
-	url: 'http://rest.learncode.academy/api/tocaqui/teste-ideias3/',
+	url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
 	success: function (data) {
 		$(".loadings")
 			.css("display", "flex")
 			.fadeOut();
 
+		console.log(data)
 	}
 })
 
