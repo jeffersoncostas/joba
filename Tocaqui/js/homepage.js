@@ -5,7 +5,7 @@ $(".loadings")
 $.ajax({
 
 	type: 'GET',
-	url: 'http://www.corsproxy.com/' + 'http://rest.learncode.academy/api/tocaqui/teste4/',
+	url: 'https://www.corsproxy.com/' + 'rest.learncode.academy/api/tocaqui/teste4/',
 	success: function (data) {
 		$(".loadings")
 			.css("display", "flex")
