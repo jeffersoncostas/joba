@@ -329,7 +329,9 @@ function logarModalLogin() {
 
 				} else {
 
-
+					$(".loadings")
+						.css("display", "flex")
+						.fadeOut();
 
 					$(".erros-modal-login").slideDown("slow");
 
