@@ -171,7 +171,24 @@ function expandirIdeiaAposRequis() {
 
 
 // abrir submenu
+let buttonMinhasIdeias = document.querySelector("#button-minhas-ideias")
 
+buttonMinhasIdeias.addEventListener('click', abrirUlMinhasIdeias)
+
+function abrirUlMinhasIdeias() {
+	let ulMinhasIdeias = document.querySelector('#ul-minhas-ideias')
+	if (ulMinhasIdeias.style.display == 'block') {
+		$("#ul-minhas-ideias").slideUp('slow');
+
+
+	} else {
+		$("#ul-minhas-ideias").slideDown('slow');
+
+	}
+
+}
+
+//
 
 //  resgatar dados do localstorage
 

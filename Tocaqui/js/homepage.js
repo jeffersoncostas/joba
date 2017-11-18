@@ -6,13 +6,13 @@ $(".loadings")
 
 
 $.ajax({
-	crossOrigin: true,
+	dataType: 'jsonp',
 	type: 'GET',
 	url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
 	success: function (data) {
 		$(".loadings")
 			.css("display", "flex")
-			.fadeOut();
+			.fadeOut()
 		console.log(data)
 	}
 })
@@ -37,11 +37,11 @@ if ('serviceWorker' in navigator) {
 
 // logar com localstorage
 
-if (localStorage.userData != null) {
-
-	window.location.replace("explorar.html")
-
-}
+//if (localStorage.userData != null) {
+//
+//	window.location.replace("explorar.html")
+//
+//}
 
 
 //
@@ -547,9 +547,6 @@ function mostrarNaTelaCadastroUsuario(dados) {
 }
 
 function requisicaoCadastrar(fullName, email, password) {
-
-
-
 
 	$.ajax({
 		type: 'GET',

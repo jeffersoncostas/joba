@@ -230,17 +230,30 @@ body {
 .menu-modal #ul-menu li {
 	cursor: pointer;
 	box-sizing: border-box;
-	padding: 20px 50px;
+	padding: 20px 20px 20px 80px;
 	font-size: 15px;
 	color: white;
 }
 
-.menu-modal #ul-menu #button-cadastrar {
+.menu-modal #ul-menu #explorar-ideias {
 	background-color: #FF286D;
+	background-image: url('../vectors/explorar-icon-white.svg');
+	background-repeat: no-repeat;
+	background-size: 45px;
+	background-position: 10px, 50%;
 }
 
+#button-minhas-ideias {
+	background-image: url('../vectors/lampada-icon-white.svg');
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: 20px, 50%;
 
-#ul-minhas-ideias {}
+}
+
+#ul-minhas-ideias {
+	display: none;
+}
 
 #ul-minhas-ideias .li-minhas-ideias {
 	background-color: #504140;
