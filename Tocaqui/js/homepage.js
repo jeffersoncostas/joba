@@ -8,7 +8,7 @@ $(".loadings")
 $.ajax({
 	data: '{"some":"json"}',
 	dataType: 'json',
-	crossOrigin: true,
+	crossDomain,
 
 	type: 'GET',
 	url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
@@ -276,8 +276,7 @@ function logarModalLogin() {
 	$.ajax({
 		data: '{"some":"json"}',
 		dataType: 'json',
-		crossOrigin: true,
-
+		crossDomain,
 		type: 'GET',
 		url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
 		success: function (data) {
@@ -452,8 +451,7 @@ function enviarNomeEmail() {
 			data: '{"some":"json"}',
 			dataType: 'json',
 
-			crossOrigin: true,
-
+			crossDomain,
 			type: 'GET',
 			url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
 			success: function (data) {
@@ -612,7 +610,7 @@ function requisicaoCadastrar(fullName, email, password) {
 	$.ajax({
 		data: '{"some":"json"}',
 		dataType: 'json',
-		crossOrigin: true,
+		crossDomain: true,
 
 		type: 'GET',
 		url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
@@ -631,7 +629,7 @@ function requisicaoCadastrar(fullName, email, password) {
 		$.ajax({
 			data: '{"some":"json"}',
 			dataType: 'json',
-			crossOrigin: true,
+			crossDomain,
 			type: 'POST',
 			url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
 			data: {
