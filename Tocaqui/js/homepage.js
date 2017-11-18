@@ -10,7 +10,7 @@ $.ajax({
 		withCredentials: true
 	},
 	type: "GET",
-	url: "http://rest.learncode.academy/api/tocaqui/teste4/"
+	url: "//rest.learncode.academy/api/tocaqui/teste4/"
 }).done(function (data) {
 	console.log(data);
 	$(".loadings")
