@@ -2,19 +2,26 @@ $(".loadings")
 	.css("display", "flex")
 	.fadeIn();
 
-$.ajax({
-	crossOrigin: true,
 
-	type: 'GET',
-	url: 'https://www.corsproxy.com/' + 'rest.learncode.academy/api/tocaqui/teste4/',
-	success: function (data) {
-		$(".loadings")
-			.css("display", "flex")
-			.fadeOut();
+// jQuery cross domain ajax
+$.get("rest.learncode.academy/api/tocaqui/teste4/").done(function (data) {
+	console.log(data);
+	$(".loadings")
+		.css("display", "flex")
+		.fadeOut();
 
-		console.log(data)
-	}
-})
+});
+
+//$.ajax({
+//	crossOrigin: true,
+//datat
+//	type: 'GET',
+//	url: 'https://www.corsproxy.com/' + 'rest.learncode.academy/api/tocaqui/teste4/',
+//	success: function (data) {
+//	
+//		console.log(data)
+//	}
+//})
 
 // service worker pwa
 
