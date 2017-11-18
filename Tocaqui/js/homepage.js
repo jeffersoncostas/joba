@@ -3,6 +3,7 @@ $(".loadings")
 	.fadeIn();
 
 $.ajax({
+	crossOrigin: true,
 
 	type: 'GET',
 	url: 'https://www.corsproxy.com/' + 'rest.learncode.academy/api/tocaqui/teste4/',
