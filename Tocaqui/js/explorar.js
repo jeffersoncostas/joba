@@ -220,7 +220,9 @@ function sairLogout() {
 	$(".loadings")
 		.css("display", "flex")
 		.fadeIn();
+
 	localStorage.userData = null;
+	localStorage.saberLog = 1;
 
 	function display() {
 
@@ -264,7 +266,12 @@ if (localStorage.userData != null) {
 	alterarPaginaUserName()
 	aparecer1()
 
-} else {}
+} else {
+
+	window.location.replace("index.html")
+
+
+}
 
 function testar12() {
 	userDataExplorar = {

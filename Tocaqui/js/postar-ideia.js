@@ -142,6 +142,8 @@ function sairLogout() {
 		.css("display", "flex")
 		.fadeIn();
 	localStorage.userData = null;
+	localStorage.saberLog = 1;
+
 
 	function display() {
 
