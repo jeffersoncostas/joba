@@ -1,20 +1,20 @@
-$(".loadings")
-	.css("display", "flex")
-	.fadeIn();
-
-
-
-
-$.ajax({
-	type: 'GET',
-	url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
-	success: function (data) {
-		$(".loadings")
-			.css("display", "flex")
-			.fadeOut()
-		console.log(data)
-	}
-})
+//$(".loadings")
+//	.css("display", "flex")
+//	.fadeIn();
+//
+//
+//
+//
+//$.ajax({
+//	type: 'GET',
+//	url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
+//	success: function (data) {
+//		$(".loadings")
+//			.css("display", "flex")
+//			.fadeOut()
+//		console.log(data)
+//	}
+//})
 
 // service worker pwa
 
