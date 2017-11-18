@@ -2,26 +2,25 @@ $(".loadings")
 	.css("display", "flex")
 	.fadeIn();
 
+let app = express();
+let cors = require('cors');
+app.use(cors())
 
 // jQuery cross domain ajax
-$.get("http://rest.learncode.academy/api/tocaqui/teste4/").done(function (data) {
-	console.log(data);
-	$(".loadings")
-		.css("display", "flex")
-		.fadeOut();
 
-});
 
-//$.ajax({
-//	crossOrigin: true,
-//datat
-//	type: 'GET',
-//	url: 'https://www.corsproxy.com/' + 'rest.learncode.academy/api/tocaqui/teste4/',
-//	success: function (data) {
-//	
-//		console.log(data)
-//	}
-//})
+$.ajax({
+	crossOrigin: true,
+	datat
+	type: 'GET',
+	url: 'https://www.corsproxy.com/' + 'rest.learncode.academy/api/tocaqui/teste4/',
+	success: function (data) {
+		$(".loadings")
+			.css("display", "flex")
+			.fadeOut();
+		console.log(data)
+	}
+})
 
 // service worker pwa
 
