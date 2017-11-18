@@ -169,6 +169,10 @@ function expandirIdeiaAposRequis() {
 
 //
 
+
+// abrir submenu
+
+
 //  resgatar dados do localstorage
 
 let userDataExplorar = null;
@@ -375,3 +379,5 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 	ideiaContent.appendChild(buttonEntrarIdeia);
 
 }
+
+//

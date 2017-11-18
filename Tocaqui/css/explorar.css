@@ -235,9 +235,19 @@ body {
 	color: white;
 }
 
-.menu-modal #ul-menu li:first-child {
+.menu-modal #ul-menu #button-cadastrar {
 	background-color: #FF286D;
 }
+
+
+#ul-minhas-ideias {}
+
+#ul-minhas-ideias .li-minhas-ideias {
+	background-color: #504140;
+
+
+}
+
 
 /**/
 
