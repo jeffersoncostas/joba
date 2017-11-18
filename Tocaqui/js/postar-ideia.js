@@ -301,7 +301,6 @@ function postarIdeia() {
 
 	function enviarAoserv(idIdeia) {
 		$.ajax({
-			crossOrigin: true,
 
 			crossDomain: true,
 			type: 'POST',
@@ -362,7 +361,6 @@ function postarIdeia() {
 						let data2 = data[i].minhasIdeias
 
 						$.ajax({
-							crossOrigin: true,
 							crossDomain: true,
 							type: 'PUT',
 							data: {
