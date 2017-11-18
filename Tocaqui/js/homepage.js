@@ -2,18 +2,14 @@ $(".loadings")
 	.css("display", "flex")
 	.fadeIn();
 
-let app = express();
-let cors = require('cors');
-app.use(cors())
+
 
 // jQuery cross domain ajax
 
 
 $.ajax({
-	crossOrigin: true,
-
 	type: 'GET',
-	url: 'https://www.corsproxy.com/' + 'rest.learncode.academy/api/tocaqui/teste4/',
+	url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
 	success: function (data) {
 		$(".loadings")
 			.css("display", "flex")
