@@ -5,31 +5,18 @@ $(".loadings")
 
 
 // jQuery CORS example
+
+
 $.ajax({
-	xhrFields: {
-		withCredentials: true
-	},
-	type: "GET",
-	url: "//rest.learncode.academy/api/tocaqui/teste4/"
-}).done(function (data) {
-	console.log(data);
-	$(".loadings")
-		.css("display", "flex")
-		.fadeOut();
-	console.log(data)
-});
-
-
-//$.ajax({
-//	type: 'GET',
-//	url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
-//	success: function (data) {
-//		$(".loadings")
-//			.css("display", "flex")
-//			.fadeOut();
-//		console.log(data)
-//	}
-//})
+	type: 'GET',
+	url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+	success: function (data) {
+		$(".loadings")
+			.css("display", "flex")
+			.fadeOut();
+		console.log(data)
+	}
+})
 
 // service worker pwa
 
