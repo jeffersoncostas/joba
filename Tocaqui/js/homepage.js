@@ -6,6 +6,7 @@ $(".loadings")
 
 
 $.ajax({
+	crossDomain: true,
 	type: 'GET',
 	url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
 	success: function (data) {
