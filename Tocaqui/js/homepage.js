@@ -11,7 +11,7 @@ app.use(cors())
 
 $.ajax({
 	crossOrigin: true,
-	datat
+
 	type: 'GET',
 	url: 'https://www.corsproxy.com/' + 'rest.learncode.academy/api/tocaqui/teste4/',
 	success: function (data) {
