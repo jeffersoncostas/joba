@@ -305,6 +305,9 @@ function aparecer1() {
 		.fadeIn();
 
 	$.ajax({
+		crossOrigin: true,
+
+		crossDomain: true,
 		type: 'GET',
 		url: 'http://rest.learncode.academy/api/tocaqui/teste-ideias6/',
 		success: function (data) {
