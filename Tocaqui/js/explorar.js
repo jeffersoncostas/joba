@@ -190,13 +190,67 @@ function abrirUlMinhasIdeias() {
 
 //
 
+
+
+//ABRIR POSTAR NOVA IDEIA 
+
+let buttonPostarNovaIdeia = document.querySelector('#button-li-postar-nova-ideia');
+
+buttonPostarNovaIdeia.addEventListener('click', abrirPostarNovaIdeia)
+
+function abrirPostarNovaIdeia() {
+
+	window.location.replace("postar-ideia.html");
+
+}
+
+
+
+// SAIR 
+
+let buttonSair = document.querySelector("#button-sair");
+
+buttonSair.addEventListener("click", sairLogout)
+
+
+function sairLogout() {
+
+	fecharMenuModal()
+
+	$(".loadings")
+		.css("display", "flex")
+		.fadeIn();
+	localStorage.userData = null;
+
+	function display() {
+
+		$(".loadings")
+			.css("display", "flex")
+			.fadeOut();
+
+		window.location.replace("index.html")
+
+
+	}
+
+	setTimeout(display, 700)
+
+}
+//
+
+
+
+
+//
+
 //  resgatar dados do localstorage
 
-let userDataExplorar = null;
+//let userDataExplorar = null;
+//
+let userDataExplorar = JSON.parse(localStorage.userData);
+//
+//testar12()
 
-//userDataExplorar = JSON.parse(localStorage.userData);
-
-testar12()
 let lStorageUser = localStorage.userData = JSON.stringify(userDataExplorar)
 
 
@@ -245,7 +299,7 @@ function aparecer1() {
 
 	$.ajax({
 		type: 'GET',
-		url: 'http://rest.learncode.academy/api/tocaqui/teste-ideias3/',
+		url: 'http://rest.learncode.academy/api/tocaqui/teste-ideias6/',
 		success: function (data) {
 			$(".loadings")
 				.css("display", "flex")
@@ -293,7 +347,7 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 	tituloIdeiaContent.appendChild(spanButton);
 
 	tituloIdeiaContent.classList.add('titulo-ideia-content');
-	spanButton.classList.add('expandir-icon');
+	spanButton.classList.add('expandir-icon-2');
 
 	ideiaContent.appendChild(tituloIdeiaContent);
 
@@ -302,8 +356,10 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 	let criadorIdeiaContent = document.createElement('div');
 	let criadorIdeiaContentSpan = document.createElement('span');
 	let spanCriadorIdeiaText = document.createTextNode(criador);
+	let TextNodeCriador = document.createTextNode('Ideia de ')
 
-	criadorIdeiaContentSpan.appendChild(spanCriadorIdeiaText)
+	criadorIdeiaContentSpan.appendChild(spanCriadorIdeiaText);
+	criadorIdeiaContent.appendChild(TextNodeCriador);
 	criadorIdeiaContent.appendChild(criadorIdeiaContentSpan);
 
 	criadorIdeiaContent.classList.add('criador-ideia-content');
@@ -315,8 +371,10 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 	let habilidadeCriadorIdeiaContent = document.createElement('div');
 	let habilidadeCriadorSpan = document.createElement('span');
 	let spanHabilidadeCriadorText = document.createTextNode(habilidades);
+	let TextNodeHabilidades = document.createTextNode('Habilidades com ')
 
 	habilidadeCriadorSpan.appendChild(spanHabilidadeCriadorText);
+	habilidadeCriadorIdeiaContent.appendChild(TextNodeHabilidades);
 	habilidadeCriadorIdeiaContent.appendChild(habilidadeCriadorSpan);
 
 	habilidadeCriadorIdeiaContent.classList.add("habilidade-criador-ideia-content")
@@ -341,8 +399,10 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 	let precisaIdeiaContent = document.createElement('div');
 	let precisaIdeiaContentSpan = document.createElement('span');
 	let spanPrecisaIdeiaText = document.createTextNode(precisaDe);
+	let TextNodePrecisaIdeia = document.createTextNode('precisa de ')
 
 	precisaIdeiaContentSpan.appendChild(spanPrecisaIdeiaText);
+	precisaIdeiaContent.appendChild(TextNodePrecisaIdeia);
 	precisaIdeiaContent.appendChild(precisaIdeiaContentSpan);
 
 	precisaIdeiaContent.classList.add('precisa-ideia-content');
@@ -355,9 +415,11 @@ function aparecerIdeiasPagina(titulo, criador, habilidades, descricao, precisaDe
 	let pessoasIdeiaContent = document.createElement('div');
 	let pessoasIdeiaContentSpan = document.createElement('span');
 	let spanPessoasIdeiaContentText = document.createTextNode(pessoasPart);
+	let TextNodePessoasIdeia = document.createTextNode(' pessoas participando')
 
 	pessoasIdeiaContentSpan.appendChild(spanPessoasIdeiaContentText);
 	pessoasIdeiaContent.appendChild(pessoasIdeiaContentSpan);
+	pessoasIdeiaContent.appendChild(TextNodePessoasIdeia);
 
 	pessoasIdeiaContent.classList.add('pessoas-ideia-content');
 

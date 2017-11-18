@@ -6,9 +6,8 @@ $(".loadings")
 
 
 $.ajax({
-	dataType: 'jsonp',
 	type: 'GET',
-	url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+	url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
 	success: function (data) {
 		$(".loadings")
 			.css("display", "flex")
@@ -128,6 +127,8 @@ let modalCadastrar = document.querySelector('.modal-cadastrar');
 
 let buttonCadastrar = document.querySelector('#button-cadastrar');
 
+let buttonLogarHome = document.querySelector("#button-logar-home");
+
 let buttonCloseModalCadastrar = document.querySelector('#close-modalcadastrar');
 
 let buttonPublicarIdeiaHome = document.querySelector('#button-publicar-home')
@@ -138,12 +139,21 @@ let buttonExplorarIdeiaHome = document.querySelector('#button-explorar-home')
 
 buttonCadastrar.addEventListener('click', abrirModalCadastrar);
 
+buttonLogarHome.addEventListener("click", abrirModalLoginDireto)
+
 buttonPublicarIdeiaHome.addEventListener('click', abrirModalCadastrar4)
 
 buttonExplorarIdeiaHome.addEventListener('click', abrirModalCadastrar)
 
 
+
 buttonCloseModalCadastrar.addEventListener('click', fecharModalCadastrar)
+
+function abrirModalLoginDireto() {
+	abrirModalCadastrar()
+	abrirModalLogina()
+
+}
 
 function abrirModalCadastrar() {
 	SaberExplorarPostar = 1;
@@ -248,11 +258,15 @@ let buttonContentLogin = document.querySelector('.button-content-login');
 buttonContentLogin.addEventListener('click', logarModalLogin);
 
 function logarModalLogin() {
+	$(".loadings")
+		.css("display", "flex")
+		.fadeIn();
+
 	let loginInputEmail = document.querySelector('#login-input-email').value;
 	let loginInputPassword = document.querySelector('#login-input-password').value;
 	$.ajax({
 		type: 'GET',
-		url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+		url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
 		success: function (data) {
 
 			for (let i = 0; i < data.length; i++) {
@@ -266,6 +280,7 @@ function logarModalLogin() {
 						'name': data[i].name,
 						'email': data[i].email,
 						'senha': data[i].senha,
+						'habilidades': data[i].habilidades,
 						'sobre': data[i].sobre,
 						'conquistas': data[i].conquistas,
 						'minhasIdeias': data[i].minhasIdeias,
@@ -279,10 +294,19 @@ function logarModalLogin() {
 					function mudarlink() {
 
 						if (SaberExplorarPostar == 1) {
+							$(".loadings")
+								.css("display", "flex")
+								.fadeOut();
+
 							window.location.replace("explorar.html")
 
 
 						} else {
+
+							$(".loadings")
+								.css("display", "flex")
+								.fadeOut();
+
 							window.location.replace("postar-ideia.html")
 
 						}
@@ -401,13 +425,16 @@ function enviarNomeEmail() {
 
 
 	} else if (valueNome != null && valueEmail == null && valueSenha == null) {
+		$(".loadings")
+			.css("display", "flex")
+			.fadeIn();
 
 		let emailExistente = null;
 		let valueInputCadastrarBp = document.querySelector('#input-cadastrar-bp').value.trim();
 
 		$.ajax({
 			type: 'GET',
-			url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+			url: 'http://rest.learncode.academy/api/tocaqui/usuarios3/',
 			success: function (data) {
 				for (let i = 0; i < data.length; i++) {
 
@@ -440,8 +467,17 @@ function enviarNomeEmail() {
 				inputCadastrarBp.value = '';
 				inputCadastrarBp.style.backgroundImage = "url('vectors/senha-usuario.svg')"
 
+				$(".loadings")
+					.css("display", "flex")
+					.fadeOut();
+
+
 
 			} else {
+				$(".loadings")
+					.css("display", "flex")
+					.fadeOut();
+
 				mostrarErrosCadastro(9)
 			}
 
@@ -547,10 +583,14 @@ function mostrarNaTelaCadastroUsuario(dados) {
 }
 
 function requisicaoCadastrar(fullName, email, password) {
+	$(".loadings")
+		.css("display", "flex")
+		.fadeIn();
+
 
 	$.ajax({
 		type: 'GET',
-		url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+		url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
 		success: function (data) {
 			let userId = parseInt(data[data.length - 1].idUser);
 
@@ -565,12 +605,13 @@ function requisicaoCadastrar(fullName, email, password) {
 	function enviarAoserv(iduser) {
 		$.ajax({
 			type: 'POST',
-			url: 'http://rest.learncode.academy/api/tocaqui/teste4/',
+			url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
 			data: {
 				'idUser': iduser,
 				'name': fullName,
 				'email': email,
 				'senha': password,
+				'habilidades': '',
 				'sobre': '',
 				'conquistas': '',
 				'minhasIdeias': [''],
@@ -583,6 +624,7 @@ function requisicaoCadastrar(fullName, email, password) {
 					'name': fullName,
 					'email': email,
 					'senha': password,
+					'habilidades': '',
 					'sobre': '',
 					'conquistas': [''],
 					'minhasIdeias': [''],
@@ -596,9 +638,17 @@ function requisicaoCadastrar(fullName, email, password) {
 				function mudarlink() {
 
 					if (SaberExplorarPostar == 1) {
+						$(".loadings")
+							.css("display", "flex")
+							.fadeOut();
+
 						window.location.replace("explorar.html")
 
 					} else {
+						$(".loadings")
+							.css("display", "flex")
+							.fadeOut();
+
 						window.location.replace("postar-ideia.html")
 					}
 
