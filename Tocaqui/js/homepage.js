@@ -271,6 +271,7 @@ function logarModalLogin() {
 
 	let loginInputEmail = document.querySelector('#login-input-email').value;
 	let loginInputPassword = document.querySelector('#login-input-password').value;
+
 	$.ajax({
 		type: 'GET',
 		url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
@@ -335,6 +336,7 @@ function logarModalLogin() {
 
 					$(".erros-modal-login").slideDown("slow");
 
+					document.querySelector('#login-input-password').value = ""
 
 					function desaparecer() {
 						$(".erros-modal-login").slideUp("slow");
