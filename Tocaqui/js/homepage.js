@@ -451,7 +451,8 @@ function enviarNomeEmail() {
 
 			crossDomain: true,
 			type: 'GET',
-			url: 'http://rest.learncode.academy/api/tocaqui/usuarios3/',
+			url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
+			url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
 			success: function (data) {
 				for (let i = 0; i < data.length; i++) {
 
@@ -625,7 +626,6 @@ function requisicaoCadastrar(fullName, email, password) {
 	function enviarAoserv(iduser) {
 		$.ajax({
 			crossOrigin: true,
-
 			crossDomain: true,
 			type: 'POST',
 			url: 'http://rest.learncode.academy/api/tocaqui/usuarios4/',
@@ -677,7 +677,7 @@ function requisicaoCadastrar(fullName, email, password) {
 
 				};
 
-				setTimeout(mudarlink, 700)
+				//setTimeout(mudarlink, 700)
 
 
 			}

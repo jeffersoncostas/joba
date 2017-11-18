@@ -363,7 +363,6 @@ function postarIdeia() {
 
 						$.ajax({
 							crossOrigin: true,
-
 							crossDomain: true,
 							type: 'PUT',
 							data: {
