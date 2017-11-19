@@ -305,6 +305,8 @@ function aparecer1() {
 		.fadeIn();
 
 	$.ajax({
+		data: '{"some":"json"}',
+		dataType: 'json',
 		type: 'GET',
 		url: 'http://rest.learncode.academy/api/tocaqui/teste-ideias6/',
 		success: function (data) {
