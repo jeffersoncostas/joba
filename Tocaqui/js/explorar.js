@@ -305,7 +305,6 @@ function aparecer1() {
 		.fadeIn();
 
 	$.ajax({
-		crossOrigin: true,
 
 		crossDomain: true,
 		type: 'GET',
