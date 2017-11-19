@@ -1,3 +1,25 @@
+// service worker pwa
+
+if ('serviceWorker' in navigator) {
+
+	navigator.serviceWorker.register('sw.js')
+		.then(function () {
+
+
+				console.log('sw registrado')
+			}
+
+
+
+		)
+
+
+}
+
+
+
+
+
 //Abrir e fechar o modal do menu
 
 let botaoMenuModal = document.querySelector('.menu-1');
